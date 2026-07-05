@@ -25,9 +25,19 @@
           class="nav-button is-active"
           type="button"
           role="tab"
+          data-view-target="home-panel"
+          aria-controls="home-panel"
+          aria-selected="true"
+        >
+          home
+        </button>
+        <button
+          class="nav-button"
+          type="button"
+          role="tab"
           data-view-target="info-panel"
           aria-controls="info-panel"
-          aria-selected="true"
+          aria-selected="false"
         >
           info
         </button>
@@ -82,14 +92,26 @@
 
       <section class="main-card" aria-label="Homepage content">
         <section
-          id="info-panel"
+          id="home-panel"
           class="content-panel is-active"
-          aria-labelledby="info-title"
+          aria-labelledby="home-title"
           role="tabpanel"
           data-content-panel
         >
-          <h2 id="info-title">Info.</h2>
+          <h2 id="home-title">Home</h2>
           <p>A simple personal homepage for information and future posts.</p>
+        </section>
+
+        <section
+          id="info-panel"
+          class="content-panel"
+          aria-labelledby="info-title"
+          role="tabpanel"
+          data-content-panel
+          hidden
+        >
+          <h2 id="info-title">Info.</h2>
+          <div class="writing-space" aria-hidden="true"></div>
         </section>
 
         <section
