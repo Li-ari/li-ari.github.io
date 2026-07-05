@@ -1,4 +1,4 @@
-# Personal Homepage
+# Personal Homepage (Created by AI)
 
 A simple personal homepage that can be uploaded directly to GitHub Pages. It uses only HTML, CSS, and JavaScript.
 
