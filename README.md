@@ -11,7 +11,7 @@ A simple personal homepage that can be uploaded directly to GitHub Pages. It use
 
 ## Current Content
 
-- Name: `Oh YuHwan`
+- Name: `Oh Yuhwan`
 - Location: `Seongdong-gu, Seoul`
 - Email: `hhaugustin893@gmail.com`
 - Left profile card: photo, location, and contact email
