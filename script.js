@@ -17,7 +17,8 @@ const translations = {
     "profile.emailTitle": "Click to copy",
     "home.title": "Welcome to my personal blog",
     "home.nickname": "My nickname is Liari.",
-    "home.lol": "I mainly play as a bottom laner with Zeri.",
+    "home.lol":
+      "In League of Legends, I mainly play as a bottom laner with Zeri.",
     "info.title": "Info.",
     "posts.title": "Posts",
     "copy.success": "{email} copied to clipboard.",
@@ -42,7 +43,7 @@ const translations = {
     "profile.emailTitle": "클릭해서 복사",
     "home.title": "제 개인 블로그에 오신 것을 환영합니다",
     "home.nickname": "닉네임은 리아리입니다.",
-    "home.lol": "롤에서는 제리로 바텀 라이너를 주로 플레이합니다.",
+    "home.lol": "리그 오브 레전드에서는 제리로 바텀 라이너를 주로 플레이합니다.",
     "info.title": "정보.",
     "posts.title": "글",
     "copy.success": "{email} 주소가 복사되었습니다.",
