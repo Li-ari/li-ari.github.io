@@ -3,24 +3,50 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Oh Yuhwan's simple personal homepage."
-    />
-    <meta property="og:title" content="Oh Yuhwan | Personal Homepage" />
+    <meta name="description" content="Oh Yuhwan's personal blog." />
+    <meta property="og:title" content="Oh Yuhwan | Personal Blog" />
     <meta
       property="og:description"
-      content="A minimal personal homepage for Oh Yuhwan."
+      content="A minimal personal blog for Oh Yuhwan."
     />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="assets/profile.jpg" />
-    <title>Oh Yuhwan | Personal Homepage</title>
+    <title>Oh Yuhwan | Personal Blog</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="#top">Oh Yuhwan</a>
-      <nav class="site-nav" aria-label="Main navigation" role="tablist">
+      <div class="brand-group">
+        <a class="brand" href="#top" data-i18n="profile.name">Oh Yuhwan</a>
+        <div
+          class="language-toggle"
+          aria-label="Language"
+          data-i18n-aria-label="language.label"
+        >
+          <button
+            class="language-button"
+            type="button"
+            data-language="ko"
+            aria-pressed="false"
+          >
+            KOR
+          </button>
+          <button
+            class="language-button is-active"
+            type="button"
+            data-language="en"
+            aria-pressed="true"
+          >
+            ENG
+          </button>
+        </div>
+      </div>
+      <nav
+        class="site-nav"
+        aria-label="Main navigation"
+        data-i18n-aria-label="nav.label"
+        role="tablist"
+      >
         <button
           class="nav-button is-active"
           type="button"
@@ -28,6 +54,7 @@
           data-view-target="home-panel"
           aria-controls="home-panel"
           aria-selected="true"
+          data-i18n="nav.home"
         >
           Home
         </button>
@@ -38,6 +65,7 @@
           data-view-target="info-panel"
           aria-controls="info-panel"
           aria-selected="false"
+          data-i18n="nav.info"
         >
           Info.
         </button>
@@ -48,6 +76,7 @@
           data-view-target="posts-panel"
           aria-controls="posts-panel"
           aria-selected="false"
+          data-i18n="nav.posts"
         >
           Posts
         </button>
@@ -60,26 +89,29 @@
           class="avatar"
           src="assets/profile.jpg"
           alt="Profile photo of Oh Yuhwan"
+          data-i18n-alt="profile.photoAlt"
           width="128"
           height="128"
         />
 
-        <h1 id="profile-title">Oh Yuhwan</h1>
+        <h1 id="profile-title" data-i18n="profile.name">Oh Yuhwan</h1>
 
         <dl class="info-list">
           <div>
-            <dt>Location</dt>
-            <dd>Seongdong-gu, Seoul</dd>
+            <dt data-i18n="profile.locationLabel">Location</dt>
+            <dd data-i18n="profile.locationValue">Seongdong-gu, Seoul</dd>
           </div>
           <div>
-            <dt>Email</dt>
+            <dt data-i18n="profile.emailLabel">Email</dt>
             <dd>
               <a
                 class="email-text"
                 href="mailto:hhaugustin893@gmail.com"
                 data-copy-email="hhaugustin893@gmail.com"
                 aria-label="Copy email address hhaugustin893@gmail.com"
+                data-i18n-aria-label="profile.emailAria"
                 title="Click to copy"
+                data-i18n-title="profile.emailTitle"
               >
                 hhaugustin893@gmail.com
               </a>
@@ -98,8 +130,10 @@
           role="tabpanel"
           data-content-panel
         >
-          <h2 id="home-title">Welcome to my personal blog</h2>
-          <p>
+          <h2 id="home-title" data-i18n="home.title">
+            Welcome to my personal blog
+          </h2>
+          <p data-i18n="home.body">
             My name is Oh Yuhwan, and I'm interested in pure mathematics.
           </p>
         </section>
@@ -112,7 +146,7 @@
           data-content-panel
           hidden
         >
-          <h2 id="info-title">Info.</h2>
+          <h2 id="info-title" data-i18n="info.title">Info.</h2>
           <div class="writing-space" aria-hidden="true"></div>
         </section>
 
@@ -124,7 +158,7 @@
           data-content-panel
           hidden
         >
-          <h2 id="posts-title">Posts</h2>
+          <h2 id="posts-title" data-i18n="posts.title">Posts</h2>
           <div class="writing-space" aria-hidden="true"></div>
         </section>
       </section>

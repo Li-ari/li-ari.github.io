@@ -41,20 +41,64 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   gap: 18px;
   width: min(960px, calc(100% - 40px));
   margin: 0 auto;
   padding: 24px 0 0;
 }
 
+.brand-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
 .brand {
+  flex: 0 1 auto;
   font-weight: 800;
   text-decoration: none;
 }
 
+.language-toggle {
+  display: inline-flex;
+  flex: 0 0 auto;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+}
+
+.language-button {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.75rem;
+  font-weight: 800;
+  line-height: 1;
+  padding: 7px 8px;
+}
+
+.language-button:hover,
+.language-button:focus-visible,
+.language-button.is-active {
+  background: var(--text);
+  color: var(--surface);
+}
+
+.language-button:focus-visible {
+  outline: none;
+}
+
 .site-nav {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
+  justify-content: flex-end;
 }
 
 .nav-button {
@@ -211,8 +255,14 @@ h2 {
 
 @media (max-width: 760px) {
   .site-header {
+    align-items: flex-start;
     width: min(100% - 28px, 760px);
     padding-top: 18px;
+  }
+
+  .site-nav {
+    width: 100%;
+    justify-content: flex-start;
   }
 
   .page-shell {

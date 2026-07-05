@@ -6,7 +6,7 @@ A simple personal homepage that can be uploaded directly to GitHub Pages. It use
 
 - `index.html`: page content
 - `styles.css`: layout, styling, and responsive design
-- `script.js`: tab switching and email copy behavior
+- `script.js`: tab switching, language switching, and email copy behavior
 - `assets/profile.jpg`: profile photo
 
 ## Current Content
@@ -15,6 +15,7 @@ A simple personal homepage that can be uploaded directly to GitHub Pages. It use
 - Location: `Seongdong-gu, Seoul`
 - Email: `hhaugustin893@gmail.com`
 - Left profile card: photo, location, and contact email
+- KOR / ENG language toggle
 - Home tab: personal blog welcome title and mathematics interest
 - Info. tab: empty and ready for future content
 - Posts tab: empty and ready for future posts
