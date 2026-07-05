@@ -44,7 +44,6 @@ emailCopyLinks.forEach((emailCopyLink) => {
     event.preventDefault();
 
     const email = emailCopyLink.dataset.copyEmail;
-    const defaultLabel = emailCopyLink.dataset.defaultLabel || "Copy Email";
 
     if (!email) {
       return;
@@ -52,14 +51,14 @@ emailCopyLinks.forEach((emailCopyLink) => {
 
     try {
       await copyText(email);
-      emailCopyLink.textContent = "Copied";
+      emailCopyLink.classList.add("is-copied");
 
       if (copyStatus) {
         copyStatus.textContent = `${email} copied to clipboard.`;
       }
 
       window.setTimeout(() => {
-        emailCopyLink.textContent = defaultLabel;
+        emailCopyLink.classList.remove("is-copied");
 
         if (copyStatus) {
           copyStatus.textContent = "";

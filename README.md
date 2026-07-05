@@ -17,7 +17,8 @@ A simple personal homepage that can be uploaded directly to GitHub Pages. It use
 - Posts section: short personal writing cards in `index.html`
 
 To replace the profile photo, replace `assets/profile.jpg` with a new image using the same filename.
-To add a post, copy one `<article class="post-card">...</article>` block in the `Posts` section and edit the date, title, and text.
+To add a post, copy one `<article class="post">...</article>` block in the `Posts` section and edit the date, title, and text.
+The email address text copies the address when clicked.
 
 ## Uploading to GitHub
 

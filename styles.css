@@ -55,10 +55,11 @@ a {
 }
 
 .avatar {
-  width: 128px;
-  height: 128px;
-  object-fit: cover;
-  object-position: center top;
+  width: min(180px, 100%);
+  height: auto;
+  aspect-ratio: 1426 / 1894;
+  object-fit: contain;
+  object-position: center;
   border-radius: 14px;
   border: 1px solid var(--line);
 }
@@ -131,29 +132,27 @@ h3 {
   font-weight: 650;
 }
 
-.email-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 44px;
-  margin-top: 28px;
-  padding: 10px 16px;
-  color: #ffffff;
-  background: var(--accent);
-  border-radius: 8px;
-  font-weight: 750;
-  text-decoration: none;
+.email-text {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  cursor: pointer;
 }
 
-.email-button:hover,
-.email-button:focus-visible {
-  background: #265d52;
+.email-text:hover,
+.email-text:focus-visible {
+  color: #265d52;
   outline: none;
+}
+
+.email-text.is-copied {
+  color: #265d52;
 }
 
 .copy-status {
   min-height: 1.6em;
-  margin: 12px 0 0;
+  margin: 14px 0 0;
   color: var(--muted);
   font-size: 0.95rem;
 }
@@ -212,8 +211,7 @@ h3 {
   }
 
   .avatar {
-    width: 104px;
-    height: 104px;
+    width: min(150px, 100%);
   }
 
   h1 {
@@ -223,10 +221,6 @@ h3 {
   .info-list div {
     grid-template-columns: 1fr;
     gap: 2px;
-  }
-
-  .email-button {
-    width: 100%;
   }
 
   .site-footer {
