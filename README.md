@@ -7,7 +7,6 @@ A simple personal homepage that can be uploaded directly to GitHub Pages. It use
 - `index.html`: page content
 - `styles.css`: layout, styling, and responsive design
 - `script.js`: current year display and email copy behavior
-- `assets/hero-workspace.png`: hero background image
 - `assets/profile.jpg`: profile photo
 
 ## Current Content

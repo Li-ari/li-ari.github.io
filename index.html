@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Yuhwan's personal homepage with location and email contact information."
+      content="Yuhwan's simple personal homepage with location, email, and personal posts."
     />
     <meta property="og:title" content="Yuhwan | Personal Homepage" />
     <meta
       property="og:description"
-      content="A simple personal homepage for Yuhwan, based in Seongdong-gu, Seoul."
+      content="A minimal personal homepage for Yuhwan, based in Seongdong-gu, Seoul."
     />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="assets/profile.jpg" />
@@ -18,119 +18,67 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="site-header">
-      <a class="brand" href="#top" aria-label="Go to home">Yuhwan</a>
-      <nav class="site-nav" aria-label="Main navigation">
-        <a href="#about">About</a>
-        <a href="#posts">Posts</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
+    <main class="page-shell">
+      <section class="profile-card" aria-label="Yuhwan profile">
+        <img
+          class="avatar"
+          src="assets/profile.jpg"
+          alt="Profile photo of Yuhwan"
+          width="128"
+          height="128"
+        />
+        <p class="kicker">Personal Homepage</p>
+        <h1>Yuhwan</h1>
+        <p class="intro">
+          Based in Seongdong-gu, Seoul. This page keeps my basic information,
+          contact email, and short personal posts in one simple place.
+        </p>
 
-    <main id="top">
-      <section class="hero" aria-label="Yuhwan personal homepage hero">
-        <div class="hero-media" aria-hidden="true"></div>
-        <div class="hero-shade" aria-hidden="true"></div>
-        <div class="hero-content">
-          <img
-            class="hero-avatar"
-            src="assets/profile.jpg"
-            alt="Profile photo of Yuhwan"
-            width="148"
-            height="148"
-          />
-          <p class="eyebrow">Personal Homepage</p>
-          <h1>Yuhwan</h1>
-          <p class="hero-lead">
-            I live in Seongdong-gu, Seoul. This is a simple personal homepage
-            with a short introduction and a quick way to contact me.
-          </p>
-          <div class="hero-actions" aria-label="Quick links">
-            <a
-              class="button button-primary copy-email"
-              href="mailto:hhaugustin893@gmail.com"
-              data-copy-email="hhaugustin893@gmail.com"
-              data-default-label="Copy Email"
-            >
-              Copy Email
-            </a>
-            <a class="button button-secondary" href="#posts">Read Posts</a>
+        <dl class="info-list">
+          <div>
+            <dt>Location</dt>
+            <dd>Seongdong-gu, Seoul</dd>
           </div>
-        </div>
+          <div>
+            <dt>Email</dt>
+            <dd>hhaugustin893@gmail.com</dd>
+          </div>
+        </dl>
+
+        <a
+          class="email-button"
+          href="mailto:hhaugustin893@gmail.com"
+          data-copy-email="hhaugustin893@gmail.com"
+          data-default-label="Copy Email"
+        >
+          Copy Email
+        </a>
+        <p class="copy-status" aria-live="polite" data-copy-status></p>
       </section>
 
-      <section id="about" class="section section-split">
-        <div>
-          <p class="eyebrow">About</p>
-          <h2>Hello, I am Yuhwan from Seongdong-gu, Seoul.</h2>
-          <figure class="profile-figure">
-            <img src="assets/profile.jpg" alt="Profile photo of Yuhwan" />
-          </figure>
+      <section class="posts" aria-labelledby="posts-title">
+        <div class="section-header">
+          <p class="kicker">Posts</p>
+          <h2 id="posts-title">Personal Notes</h2>
         </div>
-        <div class="copy-block">
+
+        <article class="post">
+          <time datetime="2026-07-06">July 6, 2026</time>
+          <h3>Starting This Homepage</h3>
           <p>
-            This page keeps things simple: a profile photo, my location, and an
-            email button that copies my address when clicked.
+            This space will hold short personal posts, updates, and thoughts I
+            want to keep in one place.
           </p>
-          <dl class="quick-facts">
-            <div>
-              <dt>Name</dt>
-              <dd>Yuhwan</dd>
-            </div>
-            <div>
-              <dt>Location</dt>
-              <dd>Seongdong-gu, Seoul</dd>
-            </div>
-            <div>
-              <dt>Email</dt>
-              <dd>hhaugustin893@gmail.com</dd>
-            </div>
-          </dl>
-        </div>
-      </section>
+        </article>
 
-      <section id="posts" class="section posts-section">
-        <div class="section-heading">
-          <p class="eyebrow">Posts</p>
-          <h2>Personal writing and small updates.</h2>
-        </div>
-        <div class="post-list">
-          <article class="post-card">
-            <time datetime="2026-07-06">July 6, 2026</time>
-            <h3>Starting This Homepage</h3>
-            <p>
-              This space will hold short personal posts, updates, and thoughts
-              I want to keep in one place.
-            </p>
-          </article>
-          <article class="post-card">
-            <time datetime="2026-07-06">July 6, 2026</time>
-            <h3>Living in Seongdong-gu</h3>
-            <p>
-              I am based in Seongdong-gu, Seoul. This page is a simple way to
-              introduce myself and make my contact information easy to find.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section id="contact" class="section contact-section">
-        <div>
-          <p class="eyebrow">Contact</p>
-          <h2>Click the email button to copy my address.</h2>
-          <p class="contact-email">hhaugustin893@gmail.com</p>
-        </div>
-        <div class="contact-actions">
-          <a
-            class="button button-primary copy-email"
-            href="mailto:hhaugustin893@gmail.com"
-            data-copy-email="hhaugustin893@gmail.com"
-            data-default-label="Copy Email"
-          >
-            Copy Email
-          </a>
-          <p class="copy-status" aria-live="polite" data-copy-status></p>
-        </div>
+        <article class="post">
+          <time datetime="2026-07-06">July 6, 2026</time>
+          <h3>Living in Seongdong-gu</h3>
+          <p>
+            I am based in Seongdong-gu, Seoul. This page is a simple way to
+            introduce myself and make my contact information easy to find.
+          </p>
+        </article>
       </section>
     </main>
 
