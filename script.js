@@ -16,8 +16,6 @@ const translations = {
     "profile.emailAria": "Copy email address hhaugustin893@gmail.com",
     "profile.emailTitle": "Click to copy",
     "home.title": "Welcome to my personal blog",
-    "home.body":
-      "My name is Oh Yuhwan, and I'm interested in pure mathematics.",
     "home.nickname": "My nickname is Liari.",
     "home.lol": "I mainly play as a bottom laner with Zeri.",
     "info.title": "Info.",
@@ -43,7 +41,6 @@ const translations = {
     "profile.emailAria": "이메일 주소 hhaugustin893@gmail.com 복사",
     "profile.emailTitle": "클릭해서 복사",
     "home.title": "제 개인 블로그에 오신 것을 환영합니다",
-    "home.body": "제 이름은 오유환이고, 순수수학에 관심이 있습니다.",
     "home.nickname": "닉네임은 리아리입니다.",
     "home.lol": "롤에서는 제리로 바텀 라이너를 주로 플레이합니다.",
     "info.title": "정보.",

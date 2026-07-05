@@ -16,7 +16,7 @@ A simple personal homepage that can be uploaded directly to GitHub Pages. It use
 - Email: `hhaugustin893@gmail.com`
 - Left profile card: photo, location, and contact email
 - KOR / ENG language toggle
-- Home tab: personal blog welcome title, mathematics interest, game role, and nickname
+- Home tab: personal blog welcome title, nickname, and game role
 - Info. tab: empty and ready for future content
 - Posts tab: empty and ready for future posts
 
