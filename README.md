@@ -14,6 +14,7 @@ A simple personal homepage that can be uploaded directly to GitHub Pages. It use
 - Name: `Oh YuHwan`
 - Location: `Seongdong-gu, Seoul`
 - Email: `hhaugustin893@gmail.com`
+- Info section: empty and ready for future content
 - Posts section: empty and ready for future posts
 
 To replace the profile photo, replace `assets/profile.jpg` with a new image using the same filename.

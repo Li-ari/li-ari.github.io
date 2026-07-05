@@ -1,9 +1,3 @@
-const yearTarget = document.querySelector("[data-current-year]");
-
-if (yearTarget) {
-  yearTarget.textContent = new Date().getFullYear().toString();
-}
-
 const emailCopyLinks = document.querySelectorAll("[data-copy-email]");
 const copyStatus = document.querySelector("[data-copy-status]");
 

@@ -48,6 +48,7 @@ a {
 }
 
 .profile-card,
+.info-section,
 .posts {
   background: var(--surface);
   border: 1px solid var(--line);
@@ -139,20 +140,14 @@ h2 {
   font-size: 0.95rem;
 }
 
-.posts {
-  padding: 28px 34px;
+.content-stack {
+  display: grid;
+  gap: 18px;
 }
 
-.site-footer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 10px;
-  width: min(960px, calc(100% - 40px));
-  margin: 0 auto;
-  padding: 0 0 34px;
-  color: var(--muted);
-  font-size: 0.92rem;
+.info-section,
+.posts {
+  padding: 28px 34px;
 }
 
 @media (max-width: 560px) {
@@ -163,11 +158,12 @@ h2 {
   }
 
   .profile-card,
+  .info-section,
   .posts {
     padding: 24px;
   }
 
-  .posts {
+  .content-stack {
     margin-top: 18px;
   }
 
@@ -182,9 +178,5 @@ h2 {
   .info-list div {
     grid-template-columns: 1fr;
     gap: 2px;
-  }
-
-  .site-footer {
-    width: min(100% - 28px, 760px);
   }
 }
