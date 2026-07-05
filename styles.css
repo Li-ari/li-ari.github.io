@@ -38,7 +38,11 @@ a {
 }
 
 .page-shell {
-  width: min(760px, calc(100% - 40px));
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+  width: min(960px, calc(100% - 40px));
   margin: 0 auto;
   padding: 56px 0 40px;
 }
@@ -51,11 +55,11 @@ a {
 }
 
 .profile-card {
-  padding: 34px;
+  padding: 24px;
 }
 
 .avatar {
-  width: min(180px, 100%);
+  width: min(150px, 100%);
   height: auto;
   aspect-ratio: 1426 / 1894;
   object-fit: contain;
@@ -64,59 +68,36 @@ a {
   border: 1px solid var(--line);
 }
 
-.kicker {
-  margin: 24px 0 8px;
-  color: var(--accent);
-  font-size: 0.78rem;
-  font-weight: 800;
-  letter-spacing: 0;
-  text-transform: uppercase;
-}
-
 h1,
 h2,
-h3,
 p {
   overflow-wrap: anywhere;
 }
 
 h1,
-h2,
-h3 {
+h2 {
   margin: 0;
   line-height: 1.18;
   letter-spacing: 0;
 }
 
 h1 {
-  font-size: 2.75rem;
+  font-size: 2.05rem;
 }
 
 h2 {
   font-size: 1.45rem;
 }
 
-h3 {
-  font-size: 1.05rem;
-}
-
-.intro {
-  max-width: 620px;
-  margin: 16px 0 0;
-  color: var(--muted);
-  font-size: 1.03rem;
-}
-
 .info-list {
   display: grid;
   gap: 12px;
-  margin: 28px 0 0;
+  margin: 24px 0 0;
 }
 
 .info-list div {
   display: grid;
-  grid-template-columns: 100px minmax(0, 1fr);
-  gap: 14px;
+  gap: 2px;
   padding-top: 12px;
   border-top: 1px solid var(--line);
 }
@@ -137,6 +118,7 @@ h3 {
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 4px;
+  overflow-wrap: anywhere;
   cursor: pointer;
 }
 
@@ -158,33 +140,7 @@ h3 {
 }
 
 .posts {
-  margin-top: 18px;
   padding: 28px 34px;
-}
-
-.section-header {
-  margin-bottom: 8px;
-}
-
-.section-header .kicker {
-  margin-top: 0;
-}
-
-.post {
-  padding: 22px 0;
-  border-top: 1px solid var(--line);
-}
-
-.post time {
-  display: block;
-  margin-bottom: 8px;
-  color: var(--muted);
-  font-size: 0.88rem;
-}
-
-.post p {
-  margin: 10px 0 0;
-  color: var(--muted);
 }
 
 .site-footer {
@@ -192,7 +148,7 @@ h3 {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 10px;
-  width: min(760px, calc(100% - 40px));
+  width: min(960px, calc(100% - 40px));
   margin: 0 auto;
   padding: 0 0 34px;
   color: var(--muted);
@@ -201,6 +157,7 @@ h3 {
 
 @media (max-width: 560px) {
   .page-shell {
+    display: block;
     width: min(100% - 28px, 760px);
     padding-top: 28px;
   }
@@ -208,6 +165,10 @@ h3 {
   .profile-card,
   .posts {
     padding: 24px;
+  }
+
+  .posts {
+    margin-top: 18px;
   }
 
   .avatar {
