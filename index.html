@@ -18,48 +18,63 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <main class="page-shell">
-      <section class="profile-card" aria-label="Oh YuHwan profile">
-        <img
-          class="avatar"
-          src="assets/profile.jpg"
-          alt="Profile photo of Oh YuHwan"
-          width="128"
-          height="128"
-        />
-        <h1>Oh YuHwan</h1>
+    <header class="site-header">
+      <a class="brand" href="#top">Oh YuHwan</a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="#info">info</a>
+        <a href="#post">post</a>
+      </nav>
+    </header>
 
-        <dl class="info-list">
-          <div>
-            <dt>Location</dt>
-            <dd>Seongdong-gu, Seoul</dd>
-          </div>
-          <div>
-            <dt>Email</dt>
-            <dd>
-              <a
-                class="email-text"
-                href="mailto:hhaugustin893@gmail.com"
-                data-copy-email="hhaugustin893@gmail.com"
-                aria-label="Copy email address hhaugustin893@gmail.com"
-                title="Click to copy"
-              >
-                hhaugustin893@gmail.com
-              </a>
-            </dd>
-          </div>
-        </dl>
+    <main id="top" class="page-shell">
+      <section class="intro-section" aria-labelledby="intro-title">
+        <h1 id="intro-title">Oh YuHwan</h1>
+        <p>A simple personal homepage for information and future posts.</p>
+      </section>
 
-        <p class="copy-status" aria-live="polite" data-copy-status></p>
+      <section id="info" class="profile-card" aria-labelledby="info-title">
+        <div class="section-heading">
+          <h2 id="info-title">Info.</h2>
+        </div>
+        <div class="profile-layout">
+          <img
+            class="avatar"
+            src="assets/profile.jpg"
+            alt="Profile photo of Oh YuHwan"
+            width="128"
+            height="128"
+          />
+
+          <div>
+            <dl class="info-list">
+              <div>
+                <dt>Location</dt>
+                <dd>Seongdong-gu, Seoul</dd>
+              </div>
+              <div>
+                <dt>Email</dt>
+                <dd>
+                  <a
+                    class="email-text"
+                    href="mailto:hhaugustin893@gmail.com"
+                    data-copy-email="hhaugustin893@gmail.com"
+                    aria-label="Copy email address hhaugustin893@gmail.com"
+                    title="Click to copy"
+                  >
+                    hhaugustin893@gmail.com
+                  </a>
+                </dd>
+              </div>
+            </dl>
+
+            <p class="copy-status" aria-live="polite" data-copy-status></p>
+          </div>
+        </div>
       </section>
 
       <div class="content-stack">
-        <section class="info-section" aria-labelledby="info-title">
-          <h2 id="info-title">INFO.</h2>
-        </section>
-
-        <section class="posts" aria-labelledby="posts-title">
-          <h2 id="posts-title">Posts</h2>
+        <section id="post" class="post-section" aria-labelledby="post-title">
+          <h2 id="post-title">Post</h2>
         </section>
       </div>
     </main>
