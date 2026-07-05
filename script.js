@@ -1,5 +1,31 @@
 const emailCopyLinks = document.querySelectorAll("[data-copy-email]");
 const copyStatus = document.querySelector("[data-copy-status]");
+const viewButtons = document.querySelectorAll("[data-view-target]");
+const contentPanels = document.querySelectorAll("[data-content-panel]");
+
+function showContentPanel(panelId) {
+  contentPanels.forEach((panel) => {
+    const isActive = panel.id === panelId;
+    panel.hidden = !isActive;
+    panel.classList.toggle("is-active", isActive);
+  });
+
+  viewButtons.forEach((button) => {
+    const isActive = button.dataset.viewTarget === panelId;
+    button.classList.toggle("is-active", isActive);
+    button.setAttribute("aria-selected", String(isActive));
+  });
+}
+
+viewButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const panelId = button.dataset.viewTarget;
+
+    if (panelId) {
+      showContentPanel(panelId);
+    }
+  });
+});
 
 async function copyText(text) {
   if (navigator.clipboard && window.isSecureContext) {

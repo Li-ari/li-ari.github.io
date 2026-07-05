@@ -6,7 +6,7 @@ A simple personal homepage that can be uploaded directly to GitHub Pages. It use
 
 - `index.html`: page content
 - `styles.css`: layout, styling, and responsive design
-- `script.js`: current year display and email copy behavior
+- `script.js`: tab switching and email copy behavior
 - `assets/profile.jpg`: profile photo
 
 ## Current Content
@@ -14,12 +14,12 @@ A simple personal homepage that can be uploaded directly to GitHub Pages. It use
 - Name: `Oh YuHwan`
 - Location: `Seongdong-gu, Seoul`
 - Email: `hhaugustin893@gmail.com`
-- Intro section: short site introduction
-- Info section: profile details and contact email
-- Post section: empty and ready for future posts
+- Left profile card: photo, location, and contact email
+- Info tab: short site introduction
+- Posts tab: empty and ready for future posts
 
 To replace the profile photo, replace `assets/profile.jpg` with a new image using the same filename.
-To add a post, add a new `<article class="post">...</article>` block in the `Post` section.
+To add a post, add content inside the `posts-panel` section.
 The email address text copies the address when clicked.
 
 ## Uploading to GitHub

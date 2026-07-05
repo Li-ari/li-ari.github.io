@@ -20,63 +20,90 @@
   <body>
     <header class="site-header">
       <a class="brand" href="#top">Oh YuHwan</a>
-      <nav class="site-nav" aria-label="Main navigation">
-        <a href="#info">info</a>
-        <a href="#post">post</a>
+      <nav class="site-nav" aria-label="Main navigation" role="tablist">
+        <button
+          class="nav-button is-active"
+          type="button"
+          role="tab"
+          data-view-target="info-panel"
+          aria-controls="info-panel"
+          aria-selected="true"
+        >
+          info
+        </button>
+        <button
+          class="nav-button"
+          type="button"
+          role="tab"
+          data-view-target="posts-panel"
+          aria-controls="posts-panel"
+          aria-selected="false"
+        >
+          posts
+        </button>
       </nav>
     </header>
 
     <main id="top" class="page-shell">
-      <section class="intro-section" aria-labelledby="intro-title">
-        <h1 id="intro-title">Oh YuHwan</h1>
-        <p>A simple personal homepage for information and future posts.</p>
-      </section>
+      <aside id="info" class="profile-card" aria-labelledby="profile-title">
+        <img
+          class="avatar"
+          src="assets/profile.jpg"
+          alt="Profile photo of Oh YuHwan"
+          width="128"
+          height="128"
+        />
 
-      <section id="info" class="profile-card" aria-labelledby="info-title">
-        <div class="section-heading">
-          <h2 id="info-title">Info.</h2>
-        </div>
-        <div class="profile-layout">
-          <img
-            class="avatar"
-            src="assets/profile.jpg"
-            alt="Profile photo of Oh YuHwan"
-            width="128"
-            height="128"
-          />
+        <h1 id="profile-title">Oh YuHwan</h1>
 
+        <dl class="info-list">
           <div>
-            <dl class="info-list">
-              <div>
-                <dt>Location</dt>
-                <dd>Seongdong-gu, Seoul</dd>
-              </div>
-              <div>
-                <dt>Email</dt>
-                <dd>
-                  <a
-                    class="email-text"
-                    href="mailto:hhaugustin893@gmail.com"
-                    data-copy-email="hhaugustin893@gmail.com"
-                    aria-label="Copy email address hhaugustin893@gmail.com"
-                    title="Click to copy"
-                  >
-                    hhaugustin893@gmail.com
-                  </a>
-                </dd>
-              </div>
-            </dl>
-
-            <p class="copy-status" aria-live="polite" data-copy-status></p>
+            <dt>Location</dt>
+            <dd>Seongdong-gu, Seoul</dd>
           </div>
-        </div>
-      </section>
+          <div>
+            <dt>Email</dt>
+            <dd>
+              <a
+                class="email-text"
+                href="mailto:hhaugustin893@gmail.com"
+                data-copy-email="hhaugustin893@gmail.com"
+                aria-label="Copy email address hhaugustin893@gmail.com"
+                title="Click to copy"
+              >
+                hhaugustin893@gmail.com
+              </a>
+            </dd>
+          </div>
+        </dl>
 
-      <div class="content-stack">
-        <section id="post" class="post-section" aria-labelledby="post-title">
-          <h2 id="post-title">Post</h2>
+        <p class="copy-status" aria-live="polite" data-copy-status></p>
+      </aside>
+
+      <section class="main-card" aria-label="Homepage content">
+        <section
+          id="info-panel"
+          class="content-panel is-active"
+          aria-labelledby="info-title"
+          role="tabpanel"
+          data-content-panel
+        >
+          <h2 id="info-title">Info.</h2>
+          <p>A simple personal homepage for information and future posts.</p>
         </section>
-      </div>
+
+        <section
+          id="posts-panel"
+          class="content-panel"
+          aria-labelledby="posts-title"
+          role="tabpanel"
+          data-content-panel
+          hidden
+        >
+          <h2 id="posts-title">Posts</h2>
+          <div class="writing-space" aria-hidden="true"></div>
+        </section>
+      </section>
     </main>
 
     <script src="script.js" defer></script>

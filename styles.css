@@ -54,61 +54,84 @@ a {
 
 .site-nav {
   display: flex;
-  gap: 14px;
+  gap: 8px;
 }
 
-.site-nav a {
+.nav-button {
+  appearance: none;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: transparent;
   color: var(--muted);
+  cursor: pointer;
+  font: inherit;
   font-size: 0.95rem;
   font-weight: 700;
-  text-decoration: none;
+  line-height: 1;
+  padding: 9px 12px;
 }
 
-.site-nav a:hover,
-.site-nav a:focus-visible {
+.nav-button:hover,
+.nav-button:focus-visible,
+.nav-button.is-active {
+  background: var(--surface);
+  border-color: var(--line);
   color: var(--text);
+}
+
+.nav-button:focus-visible {
   outline: none;
 }
 
 .page-shell {
   display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
   gap: 18px;
   width: min(960px, calc(100% - 40px));
   margin: 0 auto;
   padding: 24px 0 40px;
 }
 
-.intro-section,
 .profile-card,
-.post-section {
+.main-card {
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 8px;
 }
 
-.intro-section,
 .profile-card {
-  padding: 28px 34px;
+  align-self: start;
+  padding: 22px;
 }
 
-.intro-section p {
+.main-card {
+  min-height: 560px;
+  padding: 34px;
+}
+
+.content-panel {
+  min-height: 492px;
+}
+
+.content-panel[hidden] {
+  display: none;
+}
+
+.content-panel p {
   max-width: 560px;
   margin: 12px 0 0;
   color: var(--muted);
 }
 
-.profile-layout {
-  display: grid;
-  grid-template-columns: 150px minmax(0, 1fr);
-  gap: 24px;
-  align-items: start;
-  margin-top: 20px;
+.writing-space {
+  min-height: 420px;
 }
 
 .avatar {
-  width: min(150px, 100%);
+  width: min(170px, 100%);
   height: auto;
   aspect-ratio: 1426 / 1894;
+  margin: 0 auto 18px;
   object-fit: contain;
   object-position: center;
   border-radius: 14px;
@@ -129,17 +152,17 @@ h2 {
 }
 
 h1 {
-  font-size: 2.4rem;
+  font-size: 1.65rem;
 }
 
 h2 {
-  font-size: 1.45rem;
+  font-size: 1.55rem;
 }
 
 .info-list {
   display: grid;
   gap: 12px;
-  margin: 0;
+  margin: 20px 0 0;
 }
 
 .info-list div {
@@ -186,29 +209,20 @@ h2 {
   font-size: 0.95rem;
 }
 
-.content-stack {
-  display: grid;
-  gap: 18px;
-}
-
-.post-section {
-  padding: 28px 34px;
-}
-
-@media (max-width: 560px) {
+@media (max-width: 760px) {
   .site-header {
     width: min(100% - 28px, 760px);
     padding-top: 18px;
   }
 
   .page-shell {
+    grid-template-columns: 1fr;
     width: min(100% - 28px, 760px);
     padding-top: 18px;
   }
 
-  .intro-section,
   .profile-card,
-  .post-section {
+  .main-card {
     padding: 24px;
   }
 
@@ -217,11 +231,15 @@ h2 {
   }
 
   h1 {
-    font-size: 2.2rem;
+    font-size: 1.75rem;
   }
 
-  .profile-layout {
-    grid-template-columns: 1fr;
+  .content-panel {
+    min-height: 360px;
+  }
+
+  .writing-space {
+    min-height: 300px;
   }
 
   .info-list div {
