@@ -18,9 +18,8 @@ const translations = {
     "home.title": "Welcome to my personal blog",
     "home.body":
       "My name is Oh Yuhwan, and I'm interested in pure mathematics.",
-    "home.lol":
-      "In League of Legends, I mainly play bottom lane and Zeri.",
     "home.nickname": "My nickname is Liari.",
+    "home.lol": "I mainly play as a bottom laner with Zeri.",
     "info.title": "Info.",
     "posts.title": "Posts",
     "copy.success": "{email} copied to clipboard.",
@@ -45,8 +44,8 @@ const translations = {
     "profile.emailTitle": "클릭해서 복사",
     "home.title": "제 개인 블로그에 오신 것을 환영합니다",
     "home.body": "제 이름은 오유환이고, 순수수학에 관심이 있습니다.",
-    "home.lol": "롤에서는 바텀 라이너이며, 제리를 주로 플레이합니다.",
     "home.nickname": "닉네임은 리아리입니다.",
+    "home.lol": "롤에서는 제리로 바텀 라이너를 주로 플레이합니다.",
     "info.title": "정보.",
     "posts.title": "글",
     "copy.success": "{email} 주소가 복사되었습니다.",
