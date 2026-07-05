@@ -15,7 +15,7 @@ A simple personal homepage that can be uploaded directly to GitHub Pages. It use
 - Location: `Seongdong-gu, Seoul`
 - Email: `hhaugustin893@gmail.com`
 - Left profile card: photo, location, and contact email
-- Home tab: welcome message and mathematics interest
+- Home tab: personal blog welcome title and mathematics interest
 - Info. tab: empty and ready for future content
 - Posts tab: empty and ready for future posts
 
