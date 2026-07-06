@@ -210,6 +210,20 @@ a {
   color: var(--muted);
 }
 
+.education-block {
+  max-width: 560px;
+  margin-top: 22px;
+}
+
+.education-block p {
+  margin: 8px 0 0;
+}
+
+.education-block .education-degree {
+  color: var(--text);
+  font-weight: 700;
+}
+
 .writing-space {
   min-height: 420px;
 }
