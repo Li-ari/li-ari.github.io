@@ -9,6 +9,9 @@
   --muted: #64707d;
   --line: #e5e7eb;
   --accent: #2f6f62;
+  --card-radius: 16px;
+  --card-shadow: 0 18px 50px rgba(31, 41, 51, 0.1);
+  --card-shadow-soft: 0 10px 28px rgba(31, 41, 51, 0.08);
 }
 
 * {
@@ -103,6 +106,9 @@ a {
   font-weight: 800;
   line-height: 1;
   padding: 7px 8px;
+  transition:
+    background-color 180ms ease,
+    color 180ms ease;
 }
 
 .language-button:hover,
@@ -135,6 +141,12 @@ a {
   font-weight: 700;
   line-height: 1;
   padding: 9px 12px;
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    color 180ms ease,
+    transform 180ms ease;
 }
 
 .nav-button:hover,
@@ -143,6 +155,12 @@ a {
   background: var(--surface);
   border-color: var(--line);
   color: var(--text);
+  box-shadow: 0 8px 20px rgba(31, 41, 51, 0.08);
+}
+
+.nav-button:hover,
+.nav-button:focus-visible {
+  transform: translateY(-1px);
 }
 
 .nav-button:focus-visible {
@@ -162,7 +180,8 @@ a {
 .main-card {
   background: var(--surface);
   border: 1px solid var(--line);
-  border-radius: 8px;
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow-soft);
 }
 
 .profile-card {
@@ -173,10 +192,12 @@ a {
 .main-card {
   min-height: 560px;
   padding: 34px;
+  box-shadow: var(--card-shadow);
 }
 
 .content-panel {
   min-height: 492px;
+  animation: panel-in 180ms ease both;
 }
 
 .content-panel[hidden] {
@@ -200,8 +221,20 @@ a {
   margin: 0 auto 18px;
   object-fit: contain;
   object-position: center;
-  border-radius: 14px;
+  border-radius: 18px;
   border: 1px solid var(--line);
+}
+
+@keyframes panel-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 h1,
