@@ -8,6 +8,7 @@ A simple personal homepage that can be uploaded directly to GitHub Pages. It use
 - `styles.css`: layout, styling, and responsive design
 - `script.js`: tab switching, language switching, and email copy behavior
 - `assets/profile.jpg`: profile photo
+- `assets/favicon.ico`: browser tab icon
 
 ## Current Content
 
