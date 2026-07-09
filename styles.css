@@ -228,6 +228,11 @@ a {
   font-weight: 700;
 }
 
+.education-block .airborne-training {
+  color: var(--text);
+  font-weight: 700;
+}
+
 .writing-space {
   min-height: 420px;
 }
