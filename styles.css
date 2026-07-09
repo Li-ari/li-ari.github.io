@@ -233,6 +233,10 @@ a {
   font-weight: 700;
 }
 
+.education-block .airborne-note {
+  margin-top: 2px;
+}
+
 .writing-space {
   min-height: 420px;
 }
