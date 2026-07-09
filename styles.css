@@ -281,6 +281,15 @@ h1 {
   font-size: 1.65rem;
 }
 
+.profile-tagline {
+  margin: 7px 0 0;
+  color: var(--muted);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.88rem;
+  font-style: italic;
+  line-height: 1.35;
+}
+
 h2 {
   font-size: 1.55rem;
 }
