@@ -211,7 +211,7 @@ a {
 }
 
 .content-panel > h2 {
-  max-width: 510px;
+  width: 100%;
   margin-bottom: 24px;
   padding-bottom: 15px;
   border-bottom: 1px solid var(--line);
