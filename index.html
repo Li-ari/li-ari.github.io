@@ -14,7 +14,7 @@
     <title>Oh Yuhwan | Personal Blog</title>
     <link rel="icon" href="assets/favicon.ico" sizes="any" />
     <link rel="shortcut icon" href="assets/favicon.ico" />
-    <link rel="stylesheet" href="styles.css?v=20260709-profile-tagline" />
+    <link rel="stylesheet" href="styles.css?v=20260710-content-polish" />
   </head>
   <body>
     <header class="site-header">
@@ -124,7 +124,12 @@
           </div>
         </dl>
 
-        <p class="copy-status" aria-live="polite" data-copy-status></p>
+        <p
+          class="copy-status"
+          role="status"
+          aria-live="polite"
+          data-copy-status
+        ></p>
       </aside>
 
       <section class="main-card" aria-label="Homepage content">
@@ -181,11 +186,11 @@
           hidden
         >
           <h2 id="posts-title" data-i18n="posts.title">Posts</h2>
-          <div class="writing-space" aria-hidden="true"></div>
+          <ul class="post-list" aria-label="Post list"></ul>
         </section>
       </section>
     </main>
 
-    <script src="script.js?v=20260709-profile-tagline-2" defer></script>
+    <script src="script.js?v=20260710-copy-toast" defer></script>
   </body>
 </html>

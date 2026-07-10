@@ -75,6 +75,7 @@ const copyStatus = document.querySelector("[data-copy-status]");
 const viewButtons = document.querySelectorAll("[data-view-target]");
 const contentPanels = document.querySelectorAll("[data-content-panel]");
 const languageButtons = document.querySelectorAll("[data-language]");
+let copyStatusTimerId;
 
 function translate(key) {
   return translations[currentLanguage][key] ?? translations.en[key] ?? "";
@@ -146,10 +147,31 @@ function setLanguage(language) {
   });
 
   if (copyStatus) {
+    window.clearTimeout(copyStatusTimerId);
     copyStatus.textContent = "";
+    copyStatus.classList.remove("is-visible", "is-error");
   }
 
   saveLanguage(currentLanguage);
+}
+
+function showCopyStatus(message, isError = false) {
+  if (!copyStatus) {
+    return;
+  }
+
+  window.clearTimeout(copyStatusTimerId);
+  copyStatus.textContent = message;
+  copyStatus.classList.toggle("is-error", isError);
+  copyStatus.classList.add("is-visible");
+
+  copyStatusTimerId = window.setTimeout(
+    () => {
+      copyStatus.classList.remove("is-visible", "is-error");
+      copyStatus.textContent = "";
+    },
+    isError ? 3200 : 2200,
+  );
 }
 
 function showContentPanel(panelId) {
@@ -228,24 +250,15 @@ emailCopyLinks.forEach((emailCopyLink) => {
       await copyText(email);
       emailCopyLink.classList.add("is-copied");
 
-      if (copyStatus) {
-        copyStatus.textContent = translate("copy.success").replace(
-          "{email}",
-          email,
-        );
-      }
+      showCopyStatus(
+        translate("copy.success").replace("{email}", email),
+      );
 
       window.setTimeout(() => {
         emailCopyLink.classList.remove("is-copied");
-
-        if (copyStatus) {
-          copyStatus.textContent = "";
-        }
-      }, 2200);
+      }, 1400);
     } catch {
-      if (copyStatus) {
-        copyStatus.textContent = translate("copy.error");
-      }
+      showCopyStatus(translate("copy.error"), true);
     }
   });
 });
