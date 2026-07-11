@@ -365,17 +365,21 @@ h2 {
 
 .email-text {
   color: var(--accent);
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 4px;
+  border-radius: 4px;
+  text-decoration: none;
   overflow-wrap: anywhere;
   cursor: pointer;
+  transition: color 160ms ease;
 }
 
-.email-text:hover,
+.email-text:hover {
+  color: #265d52;
+}
+
 .email-text:focus-visible {
   color: #265d52;
-  outline: none;
+  outline: 2px solid rgba(47, 111, 98, 0.28);
+  outline-offset: 3px;
 }
 
 .email-text.is-copied {
@@ -419,6 +423,10 @@ h2 {
 }
 
 @media (max-width: 760px) {
+  body {
+    background-attachment: scroll;
+  }
+
   .site-header {
     align-items: flex-start;
     width: min(100% - 28px, 760px);
