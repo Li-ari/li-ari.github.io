@@ -26,8 +26,8 @@ const translations = {
     "info.education.period": "March 2020 – Expected February 2027",
     "info.education.service":
       "(September 2020 - March 2022 : Mandatory military service)",
-    "info.airborne.title": "Airborne #845 at ROKA",
-    "info.airborne.note": "(January 2021, during military service)",
+    "info.airborne.title": "Airborne Training #845",
+    "info.airborne.note": "ROKA · January 2021",
     "posts.title": "Posts",
     "copy.success": "{email} copied to clipboard.",
     "copy.error":
@@ -57,8 +57,8 @@ const translations = {
     "info.education.degree": "건국대학교 수학과 학사, 서울, 대한민국",
     "info.education.period": "2020년 3월 – 2027년 2월 졸업 예정",
     "info.education.service": "(2020년 9월 – 2022년 3월: 병역 의무)",
-    "info.airborne.title": "공수 기본 #845 at ROKA",
-    "info.airborne.note": "(2021년 1월, 군 복무 중)",
+    "info.airborne.title": "공수기본 #845",
+    "info.airborne.note": "대한민국 육군 · 2021년 1월",
     "posts.title": "포스트",
     "copy.success": "{email} 주소가 복사되었습니다.",
     "copy.error":
