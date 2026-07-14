@@ -77,6 +77,12 @@ const contentPanels = document.querySelectorAll("[data-content-panel]");
 const languageButtons = document.querySelectorAll("[data-language]");
 let copyStatusTimerId;
 
+const panelHashes = {
+  "home-panel": "#home",
+  "info-panel": "#info",
+  "posts-panel": "#posts",
+};
+
 function translate(key) {
   return translations[currentLanguage][key] ?? translations.en[key] ?? "";
 }
@@ -174,18 +180,36 @@ function showCopyStatus(message, isError = false) {
   );
 }
 
-function showContentPanel(panelId) {
+function getPanelIdFromHash() {
+  const currentHash = window.location.hash.toLowerCase();
+  return (
+    Object.keys(panelHashes).find(
+      (panelId) => panelHashes[panelId] === currentHash,
+    ) ?? "home-panel"
+  );
+}
+
+function showContentPanel(panelId, updateUrl = true) {
+  const resolvedPanelId = panelHashes[panelId] ? panelId : "home-panel";
+
   contentPanels.forEach((panel) => {
-    const isActive = panel.id === panelId;
+    const isActive = panel.id === resolvedPanelId;
     panel.hidden = !isActive;
     panel.classList.toggle("is-active", isActive);
   });
 
   viewButtons.forEach((button) => {
-    const isActive = button.dataset.viewTarget === panelId;
+    const isActive = button.dataset.viewTarget === resolvedPanelId;
     button.classList.toggle("is-active", isActive);
     button.setAttribute("aria-selected", String(isActive));
+    button.tabIndex = isActive ? 0 : -1;
   });
+
+  const nextHash = panelHashes[resolvedPanelId];
+
+  if (updateUrl && window.location.hash !== nextHash) {
+    window.history.pushState(null, "", nextHash);
+  }
 }
 
 viewButtons.forEach((button) => {
@@ -197,6 +221,39 @@ viewButtons.forEach((button) => {
     }
   });
 });
+
+viewButtons.forEach((button, index) => {
+  button.addEventListener("keydown", (event) => {
+    let nextIndex;
+
+    if (event.key === "ArrowRight" || event.key === "ArrowDown") {
+      nextIndex = (index + 1) % viewButtons.length;
+    } else if (event.key === "ArrowLeft" || event.key === "ArrowUp") {
+      nextIndex = (index - 1 + viewButtons.length) % viewButtons.length;
+    } else if (event.key === "Home") {
+      nextIndex = 0;
+    } else if (event.key === "End") {
+      nextIndex = viewButtons.length - 1;
+    } else {
+      return;
+    }
+
+    event.preventDefault();
+    const nextButton = viewButtons[nextIndex];
+    nextButton.focus();
+
+    if (nextButton.dataset.viewTarget) {
+      showContentPanel(nextButton.dataset.viewTarget);
+    }
+  });
+});
+
+function syncPanelWithUrl() {
+  showContentPanel(getPanelIdFromHash(), false);
+}
+
+window.addEventListener("popstate", syncPanelWithUrl);
+window.addEventListener("hashchange", syncPanelWithUrl);
 
 languageButtons.forEach((button) => {
   button.addEventListener("click", () => {
@@ -264,3 +321,4 @@ emailCopyLinks.forEach((emailCopyLink) => {
 });
 
 setLanguage(getSavedLanguage() ?? defaultLanguage);
+syncPanelWithUrl();
