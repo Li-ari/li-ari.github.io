@@ -9,7 +9,7 @@
   --muted: #64707d;
   --line: #e5e7eb;
   --accent: #2f6f62;
-  --content-width: 1320px;
+  --content-width: 1200px;
   --reading-width: 640px;
   --card-radius: 16px;
   --card-shadow: 0 12px 34px rgba(31, 41, 51, 0.08);
@@ -69,7 +69,7 @@ a {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 18px;
-  width: min(var(--content-width), calc(100% - 32px));
+  width: min(var(--content-width), calc(50% + 524px), calc(100% - 36px));
   margin: 0 auto;
   padding: 16px 0 0;
 }
@@ -172,7 +172,7 @@ a {
   display: grid;
   grid-template-columns: 300px minmax(0, 1fr);
   gap: 16px;
-  width: min(var(--content-width), calc(100% - 32px));
+  width: min(var(--content-width), calc(50% + 524px), calc(100% - 36px));
   margin: 0 auto;
   padding: 12px 0 20px;
 }
