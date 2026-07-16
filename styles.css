@@ -9,7 +9,8 @@
   --muted: #64707d;
   --line: #e5e7eb;
   --accent: #2f6f62;
-  --content-width: 1080px;
+  --content-width: 1320px;
+  --reading-width: 640px;
   --card-radius: 16px;
   --card-shadow: 0 12px 34px rgba(31, 41, 51, 0.08);
 }
@@ -68,9 +69,9 @@ a {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 18px;
-  width: min(var(--content-width), calc(100% - 40px));
+  width: min(var(--content-width), calc(100% - 32px));
   margin: 0 auto;
-  padding: 24px 0 0;
+  padding: 16px 0 0;
 }
 
 .brand-group {
@@ -170,10 +171,10 @@ a {
 .page-shell {
   display: grid;
   grid-template-columns: 300px minmax(0, 1fr);
-  gap: 20px;
-  width: min(var(--content-width), calc(100% - 40px));
+  gap: 16px;
+  width: min(var(--content-width), calc(100% - 32px));
   margin: 0 auto;
-  padding: 18px 0 28px;
+  padding: 12px 0 20px;
 }
 
 .profile-card,
@@ -186,12 +187,12 @@ a {
 
 .profile-card {
   align-self: start;
-  padding: 24px;
+  padding: 22px;
 }
 
 .main-card {
   min-height: 520px;
-  padding: 38px;
+  padding: 32px;
 }
 
 .content-panel {
@@ -204,15 +205,15 @@ a {
 }
 
 .content-panel p {
-  max-width: 510px;
+  max-width: var(--reading-width);
   margin: 12px 0 0;
   color: var(--muted);
 }
 
 .content-panel > h2 {
   width: 100%;
-  margin-bottom: 24px;
-  padding-bottom: 15px;
+  margin-bottom: 20px;
+  padding-bottom: 13px;
   border-bottom: 1px solid var(--line);
 }
 
@@ -221,7 +222,7 @@ a {
 }
 
 .education-block {
-  max-width: 510px;
+  max-width: var(--reading-width);
   margin-top: 0;
 }
 
@@ -244,7 +245,7 @@ a {
 }
 
 .post-list {
-  max-width: 510px;
+  max-width: var(--reading-width);
   margin: 0;
   padding: 0;
   list-style: none;
