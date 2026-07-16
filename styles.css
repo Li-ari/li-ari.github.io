@@ -9,6 +9,7 @@
   --muted: #64707d;
   --line: #e5e7eb;
   --accent: #2f6f62;
+  --content-width: 1080px;
   --card-radius: 16px;
   --card-shadow: 0 12px 34px rgba(31, 41, 51, 0.08);
 }
@@ -67,7 +68,7 @@ a {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 18px;
-  width: min(960px, calc(100% - 40px));
+  width: min(var(--content-width), calc(100% - 40px));
   margin: 0 auto;
   padding: 24px 0 0;
 }
@@ -168,11 +169,11 @@ a {
 
 .page-shell {
   display: grid;
-  grid-template-columns: 280px minmax(0, 1fr);
-  gap: 18px;
-  width: min(960px, calc(100% - 40px));
+  grid-template-columns: 300px minmax(0, 1fr);
+  gap: 20px;
+  width: min(var(--content-width), calc(100% - 40px));
   margin: 0 auto;
-  padding: 24px 0 40px;
+  padding: 18px 0 28px;
 }
 
 .profile-card,
@@ -185,16 +186,16 @@ a {
 
 .profile-card {
   align-self: start;
-  padding: 22px;
+  padding: 24px;
 }
 
 .main-card {
-  min-height: 500px;
-  padding: 34px;
+  min-height: 520px;
+  padding: 38px;
 }
 
 .content-panel {
-  min-height: 432px;
+  min-height: 442px;
   animation: panel-in 180ms ease both;
 }
 
@@ -280,7 +281,7 @@ a {
 }
 
 .avatar {
-  width: min(184px, 100%);
+  width: min(196px, 100%);
   height: auto;
   aspect-ratio: 1426 / 1894;
   margin: 0 auto 18px;
