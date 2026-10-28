@@ -272,6 +272,10 @@ h2 {
   font-size: 0.92rem;
 }
 
+.content-panel .team-fandom {
+  margin-top: 29px;
+}
+
 .post-list {
   margin: 0;
   padding: 0;

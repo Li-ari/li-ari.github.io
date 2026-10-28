@@ -21,6 +21,8 @@ const translations = {
     "home.nickname.name": "Liari",
     "home.nickname.suffix": ".",
     "home.lol": "Peak rank: Silver III. Zeri one-trick specialist.",
+    "home.poppy":
+      "I used to main Poppy in the jungle, and I'm very good at her too.",
     "info.title": "Info.",
     "info.education.degree":
       "B.S. in Dark Chocolate Milk at Konkuk Milk, Seoul, South Korea",
@@ -30,6 +32,8 @@ const translations = {
       "(September 2020 - March 2022 : Mandatory military service)",
     "info.airborne.title": "Airborne Training #845",
     "info.airborne.note": "ROKA · January 2021",
+    "info.fandom":
+      "Fan of Dplus KIA's League of Legends team · Since December 2022",
     "posts.title": "Posts",
     "copy.success": "{email} copied to clipboard.",
     "copy.error":
@@ -57,6 +61,8 @@ const translations = {
     "home.nickname.name": "리아리",
     "home.nickname.suffix": "입니다.",
     "home.lol": "최고 티어는 실버 3, 제리 원챔 장인입니다.",
+    "home.poppy":
+      "이전에는 정글 뽀삐를 주로 플레이했고, 뽀삐도 아주 잘합니다.",
     "info.title": "정보",
     "info.education.degree": "건국우유 다크 초코렛 우유학과 학사과정",
     "info.education.buyMilk": "구입하기 ↗",
@@ -64,6 +70,7 @@ const translations = {
     "info.education.service": "(2020년 9월 – 2022년 3월: 병역 의무)",
     "info.airborne.title": "공수기본 #845",
     "info.airborne.note": "대한민국 육군 · 2021년 1월",
+    "info.fandom": "Dplus KIA 리그 오브 레전드 팀 팬 · 2022년 12월부터",
     "posts.title": "포스트",
     "copy.success": "{email} 주소가 복사되었습니다.",
     "copy.error":
