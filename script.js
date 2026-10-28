@@ -35,6 +35,19 @@ const translations = {
     "info.fandom": "Fan of Dplus KIA's League of Legends team",
     "info.fandom.since": "Since December 2022",
     "posts.title": "Posts",
+    "posts.listLabel": "Post list",
+    "posts.back": "← All posts",
+    "posts.sample.title": "Notes from a Rainy Afternoon",
+    "posts.sample.date": "October 17, 2026",
+    "posts.sample.paragraph1":
+      "As raindrops gathered on the window, I closed the book lying open on my desk. On some days, the view outside stays with me more clearly than the pages I have read.",
+    "posts.sample.paragraph2":
+      "While my coffee cooled, I wrote down three small plans: take a walk, finish a sentence I had been putting off, and leave a little time for doing nothing.",
+    "posts.sample.subtitle": "A slower pace",
+    "posts.sample.paragraph3":
+      "After the rain stopped, I walked around the nearby streets. Nothing remarkable happened, but I liked the smell of wet leaves and the reflections in the puddles beneath the streetlights.",
+    "posts.sample.paragraph4":
+      "The conclusion was simple: not every day needs a grand title. When there is a moment worth remembering, a few lines are enough.",
     "copy.success": "{email} copied to clipboard.",
     "copy.error":
       "Could not copy automatically. Please select the email address manually.",
@@ -73,6 +86,19 @@ const translations = {
     "info.fandom": "Dplus KIA 리그 오브 레전드 팀 팬",
     "info.fandom.since": "2022년 12월부터",
     "posts.title": "포스트",
+    "posts.listLabel": "포스트 목록",
+    "posts.back": "← 글 목록으로",
+    "posts.sample.title": "비 오는 오후의 작은 기록",
+    "posts.sample.date": "2026년 10월 17일",
+    "posts.sample.paragraph1":
+      "창문에 빗방울이 하나둘 맺히던 오후, 책상 위에 펼쳐 둔 책을 잠시 덮었다. 읽은 페이지보다 오래 바라본 창밖의 풍경이 더 선명하게 남는 날도 있다.",
+    "posts.sample.paragraph2":
+      "커피가 식는 동안 해야 할 일을 세 줄로 적었다. 첫 번째는 산책하기, 두 번째는 미뤄 둔 문장 마무리하기, 마지막은 아무것도 하지 않는 시간을 조금 남겨 두기였다.",
+    "posts.sample.subtitle": "조금 느리게",
+    "posts.sample.paragraph3":
+      "비가 그친 뒤에는 가까운 골목을 한 바퀴 돌았다. 특별한 사건은 없었지만 젖은 나뭇잎 냄새와 가로등 아래 고인 물의 색이 마음에 들었다.",
+    "posts.sample.paragraph4":
+      "오늘의 결론은 간단하다. 모든 하루에 거창한 이름을 붙일 필요는 없다. 다만 잊고 싶지 않은 장면이 있다면, 이렇게 몇 줄 남겨 두는 것으로 충분하다.",
     "copy.success": "{email} 주소가 복사되었습니다.",
     "copy.error":
       "자동으로 복사하지 못했습니다. 이메일 주소를 직접 선택해 주세요.",
@@ -88,6 +114,9 @@ const copyStatus = document.querySelector("[data-copy-status]");
 const viewButtons = document.querySelectorAll("[data-view-target]");
 const contentPanels = document.querySelectorAll("[data-content-panel]");
 const languageButtons = document.querySelectorAll("[data-language]");
+const postsPanel = document.getElementById("posts-panel");
+const postListView = document.querySelector("[data-post-list-view]");
+const postArticles = document.querySelectorAll("[data-post-article]");
 let copyStatusTimerId;
 
 const panelHashes = {
@@ -193,8 +222,18 @@ function showCopyStatus(message, isError = false) {
   );
 }
 
+function getPostArticleFromHash() {
+  const currentHash = window.location.hash.toLowerCase();
+  return Array.from(postArticles).find(
+    (article) => `#posts/${article.dataset.postArticle}` === currentHash,
+  );
+}
+
 function getPanelIdFromHash() {
   const currentHash = window.location.hash.toLowerCase();
+  if (currentHash.startsWith("#posts/")) {
+    return "posts-panel";
+  }
   return (
     Object.keys(panelHashes).find(
       (panelId) => panelHashes[panelId] === currentHash,
@@ -223,6 +262,22 @@ function showContentPanel(panelId, updateUrl = true) {
   if (updateUrl && window.location.hash !== nextHash) {
     window.history.pushState(null, "", nextHash);
   }
+
+  const activePost =
+    resolvedPanelId === "posts-panel" ? getPostArticleFromHash() : undefined;
+
+  if (postListView) {
+    postListView.hidden = Boolean(activePost);
+  }
+
+  postArticles.forEach((article) => {
+    article.hidden = article !== activePost;
+  });
+
+  postsPanel?.setAttribute(
+    "aria-labelledby",
+    activePost?.getAttribute("aria-labelledby") ?? "posts-title",
+  );
 }
 
 viewButtons.forEach((button) => {
@@ -261,8 +316,22 @@ viewButtons.forEach((button, index) => {
   });
 });
 
-function syncPanelWithUrl() {
+function syncPanelWithUrl(event) {
+  const previousPost = Array.from(postArticles).find((article) => !article.hidden);
   showContentPanel(getPanelIdFromHash(), false);
+
+  if (!event) {
+    return;
+  }
+
+  const activePost = getPostArticleFromHash();
+  if (activePost) {
+    activePost.querySelector("h2")?.focus({ preventScroll: true });
+  } else if (previousPost && getPanelIdFromHash() === "posts-panel") {
+    postListView
+      ?.querySelector(`a[href="#posts/${previousPost.dataset.postArticle}"]`)
+      ?.focus({ preventScroll: true });
+  }
 }
 
 window.addEventListener("popstate", syncPanelWithUrl);

@@ -160,6 +160,7 @@ a:hover {
 
 h1,
 h2,
+h3,
 p,
 dd {
   overflow-wrap: anywhere;
@@ -283,6 +284,10 @@ h2 {
   list-style: none;
 }
 
+[data-post-list-view] > h2 {
+  margin-bottom: 25px;
+}
+
 .post-item {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
@@ -297,12 +302,43 @@ h2 {
 
 .post-link {
   text-decoration-color: var(--line);
+  overflow-wrap: anywhere;
 }
 
 .post-date {
   color: var(--muted);
   font-size: 0.85rem;
   white-space: nowrap;
+}
+
+.post-article {
+  max-width: var(--reading-width);
+}
+
+.post-back {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.post-header {
+  margin: 24px 0 28px;
+}
+
+.content-panel .post-meta {
+  margin-top: 7px;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.post-body p {
+  margin: 0 0 18px;
+}
+
+.post-body h3 {
+  margin: 30px 0 12px;
+  font-size: 1.18rem;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
 .copy-status {

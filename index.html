@@ -14,7 +14,7 @@
     <title>Oh Yuhwan | Personal Blog</title>
     <link rel="icon" href="assets/favicon.ico" sizes="any" />
     <link rel="shortcut icon" href="assets/favicon.ico" />
-    <link rel="stylesheet" href="styles.css?v=20261028-info-notes" />
+    <link rel="stylesheet" href="styles.css?v=20261028-sample-post" />
   </head>
   <body>
     <header class="site-header">
@@ -210,12 +210,72 @@
           data-content-panel
           hidden
         >
-          <h2 id="posts-title" data-i18n="posts.title">Posts</h2>
-          <ul class="post-list" aria-label="Post list"></ul>
+          <div data-post-list-view>
+            <h2 id="posts-title" data-i18n="posts.title">Posts</h2>
+            <ul
+              class="post-list"
+              aria-label="Post list"
+              data-i18n-aria-label="posts.listLabel"
+            >
+              <!-- Temporary sample post for reviewing the post format. -->
+              <li class="post-item">
+                <a
+                  class="post-link"
+                  href="#posts/rainy-afternoon"
+                  data-i18n="posts.sample.title"
+                >Notes from a Rainy Afternoon</a>
+                <time
+                  class="post-date"
+                  datetime="2026-10-17"
+                  data-i18n="posts.sample.date"
+                >October 17, 2026</time>
+              </li>
+            </ul>
+          </div>
+          <article
+            class="post-article"
+            data-post-article="rainy-afternoon"
+            aria-labelledby="sample-post-title"
+            hidden
+          >
+            <a class="post-back" href="#posts" data-i18n="posts.back">← All posts</a>
+            <header class="post-header">
+              <h2
+                id="sample-post-title"
+                tabindex="-1"
+                data-i18n="posts.sample.title"
+              >Notes from a Rainy Afternoon</h2>
+              <p class="post-meta">
+                <time datetime="2026-10-17" data-i18n="posts.sample.date">October 17, 2026</time>
+              </p>
+            </header>
+            <div class="post-body">
+              <p data-i18n="posts.sample.paragraph1">
+                As raindrops gathered on the window, I closed the book lying open
+                on my desk. On some days, the view outside stays with me more
+                clearly than the pages I have read.
+              </p>
+              <p data-i18n="posts.sample.paragraph2">
+                While my coffee cooled, I wrote down three small plans: take a
+                walk, finish a sentence I had been putting off, and leave a little
+                time for doing nothing.
+              </p>
+              <h3 data-i18n="posts.sample.subtitle">A slower pace</h3>
+              <p data-i18n="posts.sample.paragraph3">
+                After the rain stopped, I walked around the nearby streets.
+                Nothing remarkable happened, but I liked the smell of wet leaves
+                and the reflections in the puddles beneath the streetlights.
+              </p>
+              <p data-i18n="posts.sample.paragraph4">
+                The conclusion was simple: not every day needs a grand title.
+                When there is a moment worth remembering, a few lines are enough.
+              </p>
+            </div>
+          </article>
         </section>
       </section>
     </main>
 
-    <script src="script.js?v=20261028-info-hierarchy" defer></script>
+    <script src="script.js?v=20261028-sample-post" defer></script>
   </body>
 </html>
