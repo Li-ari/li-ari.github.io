@@ -48,6 +48,17 @@ const translations = {
       "After the rain stopped, I walked around the nearby streets. Nothing remarkable happened, but I liked the smell of wet leaves and the reflections in the puddles beneath the streetlights.",
     "posts.sample.paragraph4":
       "The conclusion was simple: not every day needs a grand title. When there is a moment worth remembering, a few lines are enough.",
+    "posts.bookshop.title": "How to Get Lost in a Bookshop",
+    "posts.bookshop.date": "October 24, 2026",
+    "posts.bookshop.paragraph1":
+      "I went into a small bookshop to buy a notebook. Ten minutes later, I had forgotten the notebook and was reading the opening pages of a book I had never heard of.",
+    "posts.bookshop.paragraph2":
+      "The shelves seemed to have their own idea of where I should go. A collection of essays led me to a travel journal, and the journal somehow led me to a book about keeping plants alive.",
+    "posts.bookshop.subtitle": "A book I hadn't planned to buy",
+    "posts.bookshop.paragraph3":
+      "I chose the thinnest book in the pile, partly because it would fit in my coat pocket. On the walk home, I stopped at a quiet cafe and read the first chapter by the window.",
+    "posts.bookshop.paragraph4":
+      "The notebook can wait until tomorrow. For today, taking a small detour was enough.",
     "copy.success": "{email} copied to clipboard.",
     "copy.error":
       "Could not copy automatically. Please select the email address manually.",
@@ -99,6 +110,17 @@ const translations = {
       "비가 그친 뒤에는 가까운 골목을 한 바퀴 돌았다. 특별한 사건은 없었지만 젖은 나뭇잎 냄새와 가로등 아래 고인 물의 색이 마음에 들었다.",
     "posts.sample.paragraph4":
       "오늘의 결론은 간단하다. 모든 하루에 거창한 이름을 붙일 필요는 없다. 다만 잊고 싶지 않은 장면이 있다면, 이렇게 몇 줄 남겨 두는 것으로 충분하다.",
+    "posts.bookshop.title": "서점에서 길을 잃는 방법",
+    "posts.bookshop.date": "2026년 10월 24일",
+    "posts.bookshop.paragraph1":
+      "수첩 한 권을 사려고 작은 서점에 들어갔다. 십 분쯤 지나자 수첩 생각은 사라졌고, 제목도 처음 보는 책의 첫 장을 읽고 있었다.",
+    "posts.bookshop.paragraph2":
+      "서가에는 나름의 길 안내가 있는 모양이었다. 에세이를 집어 들었다가 여행기로 옮겨 갔고, 어느새 화분을 잘 키우는 방법이 적힌 책 앞에 서 있었다.",
+    "posts.bookshop.subtitle": "계획에 없던 한 권",
+    "posts.bookshop.paragraph3":
+      "결국 가장 얇은 책을 골랐다. 외투 주머니에 들어간다는 점이 마음에 들었다. 집으로 돌아오는 길에는 조용한 카페에 들러 창가에서 첫 장을 읽었다.",
+    "posts.bookshop.paragraph4":
+      "수첩은 내일 사도 괜찮다. 오늘은 조금 돌아가는 길을 찾았다는 것만으로 충분했다.",
     "copy.success": "{email} 주소가 복사되었습니다.",
     "copy.error":
       "자동으로 복사하지 못했습니다. 이메일 주소를 직접 선택해 주세요.",

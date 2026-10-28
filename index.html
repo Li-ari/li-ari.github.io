@@ -217,7 +217,19 @@
               aria-label="Post list"
               data-i18n-aria-label="posts.listLabel"
             >
-              <!-- Temporary sample post for reviewing the post format. -->
+              <!-- Temporary sample posts for reviewing the post format. -->
+              <li class="post-item">
+                <a
+                  class="post-link"
+                  href="#posts/bookshop-detour"
+                  data-i18n="posts.bookshop.title"
+                >How to Get Lost in a Bookshop</a>
+                <time
+                  class="post-date"
+                  datetime="2026-10-24"
+                  data-i18n="posts.bookshop.date"
+                >October 24, 2026</time>
+              </li>
               <li class="post-item">
                 <a
                   class="post-link"
@@ -272,10 +284,50 @@
               </p>
             </div>
           </article>
+          <article
+            class="post-article"
+            data-post-article="bookshop-detour"
+            aria-labelledby="bookshop-post-title"
+            hidden
+          >
+            <a class="post-back" href="#posts" data-i18n="posts.back">← All posts</a>
+            <header class="post-header">
+              <h2
+                id="bookshop-post-title"
+                tabindex="-1"
+                data-i18n="posts.bookshop.title"
+              >How to Get Lost in a Bookshop</h2>
+              <p class="post-meta">
+                <time datetime="2026-10-24" data-i18n="posts.bookshop.date">October 24, 2026</time>
+              </p>
+            </header>
+            <div class="post-body">
+              <p data-i18n="posts.bookshop.paragraph1">
+                I went into a small bookshop to buy a notebook. Ten minutes later,
+                I had forgotten the notebook and was reading the opening pages of
+                a book I had never heard of.
+              </p>
+              <p data-i18n="posts.bookshop.paragraph2">
+                The shelves seemed to have their own idea of where I should go.
+                A collection of essays led me to a travel journal, and the journal
+                somehow led me to a book about keeping plants alive.
+              </p>
+              <h3 data-i18n="posts.bookshop.subtitle">A book I hadn't planned to buy</h3>
+              <p data-i18n="posts.bookshop.paragraph3">
+                I chose the thinnest book in the pile, partly because it would fit
+                in my coat pocket. On the walk home, I stopped at a quiet cafe and
+                read the first chapter by the window.
+              </p>
+              <p data-i18n="posts.bookshop.paragraph4">
+                The notebook can wait until tomorrow. For today, taking a small
+                detour was enough.
+              </p>
+            </div>
+          </article>
         </section>
       </section>
     </main>
 
-    <script src="script.js?v=20261028-sample-post" defer></script>
+    <script src="script.js?v=20261028-two-sample-posts" defer></script>
   </body>
 </html>

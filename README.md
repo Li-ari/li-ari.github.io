@@ -32,10 +32,10 @@ The current classic, minimal presentation is the approved project baseline. [AGE
 - KOR / ENG language toggle
 - Home: welcome title, linked nickname, Silver III peak rank, Zeri one-trick introduction, and previous jungle Poppy experience
 - Info.: playful milk-themed education, study and military-service periods, airborne training, and Dplus KIA fandom since December 2022
-- Posts: one temporary sample article for reviewing the list and reading layout; title, localized date, paragraphs, and a subheading
+- Posts: two temporary sample articles for reviewing the list and reading layout; titles, localized dates, paragraphs, and subheadings
 
 To replace the profile photo, replace `assets/profile.jpg` with a new image using the same filename.
-The temporary article opens at `#posts/rainy-afternoon`, with a text link back to the post list. To add a post, add its list link and an article with a matching `data-post-article` slug inside `posts-panel`, then add its Korean and English translation strings.
+The temporary articles open at `#posts/bookshop-detour` and `#posts/rainy-afternoon`, with text links back to the post list. The list places the more recent date first. To add a post, add its list link and an article with a matching `data-post-article` slug inside `posts-panel`, then add its Korean and English translation strings.
 The email address text copies the address when clicked.
 
 ## Publishing Changes
