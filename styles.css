@@ -17,6 +17,7 @@ body {
   color: var(--text);
   background: var(--background);
   font-family: Georgia, "Times New Roman", "Batang", "바탕", serif;
+  font-variant-numeric: lining-nums proportional-nums;
   font-size: 17px;
   line-height: 1.8;
   word-break: keep-all;
