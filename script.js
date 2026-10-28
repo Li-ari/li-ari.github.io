@@ -32,8 +32,8 @@ const translations = {
       "(September 2020 - March 2022 : Mandatory military service)",
     "info.airborne.title": "Airborne Training #845",
     "info.airborne.note": "ROKA · January 2021",
-    "info.fandom":
-      "Fan of Dplus KIA's League of Legends team · Since December 2022",
+    "info.fandom": "Fan of Dplus KIA's League of Legends team",
+    "info.fandom.since": "Since December 2022",
     "posts.title": "Posts",
     "copy.success": "{email} copied to clipboard.",
     "copy.error":
@@ -70,7 +70,8 @@ const translations = {
     "info.education.service": "(2020년 9월 – 2022년 3월: 병역 의무)",
     "info.airborne.title": "공수기본 #845",
     "info.airborne.note": "대한민국 육군 · 2021년 1월",
-    "info.fandom": "Dplus KIA 리그 오브 레전드 팀 팬 · 2022년 12월부터",
+    "info.fandom": "Dplus KIA 리그 오브 레전드 팀 팬",
+    "info.fandom.since": "2022년 12월부터",
     "posts.title": "포스트",
     "copy.success": "{email} 주소가 복사되었습니다.",
     "copy.error":
