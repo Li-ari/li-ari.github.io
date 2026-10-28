@@ -37,7 +37,8 @@ const translations = {
     "posts.title": "Posts",
     "posts.listLabel": "Post list",
     "posts.back": "← All posts",
-    "posts.sample.title": "Notes from a Rainy Afternoon",
+    "posts.sample.title":
+      "Notes from a Rainy Afternoon — On Raindrops Gathering on the Window, a Cup of Coffee Left to Go Cold, an Unfinished Book, and the Small but Lasting Thoughts That Appeared During an Aimless Walk Through the Neighborhood",
     "posts.sample.date": "October 17, 2026",
     "posts.sample.paragraph1":
       "As raindrops gathered on the window, I closed the book lying open on my desk. On some days, the view outside stays with me more clearly than the pages I have read.",
@@ -99,7 +100,8 @@ const translations = {
     "posts.title": "포스트",
     "posts.listLabel": "포스트 목록",
     "posts.back": "← 글 목록으로",
-    "posts.sample.title": "비 오는 오후의 작은 기록",
+    "posts.sample.title":
+      "비 오는 오후의 작은 기록 — 창문에 맺힌 빗방울을 바라보다가 식어 버린 커피 한 잔과 끝내 읽지 못한 책, 그리고 아무런 계획 없이 걸었던 골목에서 떠올린 사소하지만 오래 남을 생각들에 대하여",
     "posts.sample.date": "2026년 10월 17일",
     "posts.sample.paragraph1":
       "창문에 빗방울이 하나둘 맺히던 오후, 책상 위에 펼쳐 둔 책을 잠시 덮었다. 읽은 페이지보다 오래 바라본 창밖의 풍경이 더 선명하게 남는 날도 있다.",

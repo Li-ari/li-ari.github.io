@@ -301,7 +301,7 @@ h2 {
 }
 
 .post-link {
-  text-decoration-color: var(--line);
+  text-decoration: none;
   overflow-wrap: anywhere;
 }
 
