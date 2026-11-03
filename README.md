@@ -32,11 +32,13 @@ The current classic, minimal presentation is the approved project baseline. [AGE
 - KOR / ENG language toggle
 - Home: welcome title, linked nickname, Silver III peak rank, Zeri one-trick introduction, and previous jungle Poppy experience
 - Info.: playful milk-themed education, study and military-service periods, airborne training, and Dplus KIA fandom since December 2022
-- Posts: “행운의 여신은 용감한 자를 좋아한다.” / “Fortuna Favors the Bold.” at `#posts/fortuna-favors-the-bold`, and “미래상” / “A Vision of the Future” at `#posts/future-outlook`, both published November 3, 2026; the two temporary sample articles have been removed
+- Posts: ep. 2 “행운의 여신은 용감한 자를 좋아한다.” / “Fortuna Favors the Bold.” at `#posts/fortuna-favors-the-bold`, and ep. 1 “미래상” / “A Vision of the Future” at `#posts/future-outlook`, both published November 3, 2026; the two temporary sample articles have been removed
 
 To replace the profile photo, replace `assets/profile.jpg` with a new image using the same filename.
 The two temporary sample articles have been removed. The post styling and hash routing are preserved. To add a post, place a `.post-item` in `.post-list` with a `.post-link` to `#posts/your-slug` and a `.post-date` time element. Add a `.post-article` with `data-post-article="your-slug"`, `hidden`, and `aria-labelledby` pointing to its unique heading ID inside `posts-panel`. Its structure is a `.post-back` link to `#posts`, a `.post-header` containing the full `h2` title and a muted `.post-meta` date, then a `.post-body` with paragraphs and optional `h3` subheadings. Add matching Korean and English translation strings; use `data-i18n-title` on the list link so the full title is available when it is truncated. Keep the list in reverse chronological order.
 The email address text copies the address when clicked.
+
+Episode numbers are fixed by publication order. When adding a post, assign the current `data-next-post-episode` value from `posts-panel` to the article's `data-post-episode`, then increase the next value by one. Never decrease it or renumber existing posts when reordering or deleting them. Keep translation titles free of prefixes: `updatePostEpisodeTitles()` adds the number to the list title, article heading, and tooltip. Include the same number in the HTML fallback titles.
 
 ## Publishing Changes
 

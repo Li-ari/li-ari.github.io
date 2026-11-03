@@ -165,6 +165,28 @@ function translate(key) {
   return translations[currentLanguage][key] ?? translations.en[key] ?? "";
 }
 
+function updatePostEpisodeTitles() {
+  postArticles.forEach((article) => {
+    const episode = article.dataset.postEpisode;
+    const heading = article.querySelector("h2[data-i18n]");
+
+    if (!heading || !/^[1-9]\d*$/.test(episode ?? "")) {
+      return;
+    }
+
+    const title = `ep. ${episode} ${translate(heading.dataset.i18n)}`;
+    heading.textContent = title;
+
+    const listLink = postListView?.querySelector(
+      `a[href="#posts/${article.dataset.postArticle}"]`,
+    );
+    if (listLink) {
+      listLink.textContent = title;
+      listLink.title = title;
+    }
+  });
+}
+
 function updateTranslatedText() {
   document.querySelectorAll("[data-i18n]").forEach((element) => {
     element.textContent = translate(element.dataset.i18n);
@@ -184,6 +206,8 @@ function updateTranslatedText() {
   document.querySelectorAll("[data-i18n-alt]").forEach((element) => {
     element.setAttribute("alt", translate(element.dataset.i18nAlt));
   });
+
+  updatePostEpisodeTitles();
 
   document.documentElement.lang = currentLanguage === "ko" ? "ko" : "en";
   document.title = translate("meta.title");
