@@ -94,7 +94,7 @@ const translations = {
     "home.poppy":
       "이전에는 정글 뽀삐를 주로 플레이했고, 뽀삐도 아주 잘합니다.",
     "info.title": "정보",
-    "info.education.degree": "건국대 수학과 학사과정",
+    "info.education.degree": "건국대학교 수학과 학사과정",
     "info.education.period": "2020년 3월 – 2027년 2월 졸업 예정",
     "info.education.service": "(2020년 9월 – 2022년 3월: 병역 의무)",
     "info.airborne.title": "공수기본 #845",
