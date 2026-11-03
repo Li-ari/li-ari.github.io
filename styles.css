@@ -338,6 +338,20 @@ h2 {
   margin: 0 0 18px;
 }
 
+.post-body ul {
+  margin: 0 0 18px;
+  padding-left: 1.3em;
+}
+
+.post-body li {
+  margin-bottom: 8px;
+  overflow-wrap: anywhere;
+}
+
+.post-body li:last-child {
+  margin-bottom: 0;
+}
+
 .post-body h3 {
   margin: 30px 0 12px;
   font-size: 1.18rem;
