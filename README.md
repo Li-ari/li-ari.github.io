@@ -32,7 +32,7 @@ The current classic, minimal presentation is the approved project baseline. [AGE
 - KOR / ENG language toggle
 - Home: welcome title, linked nickname, Silver III peak rank, Zeri one-trick introduction, and previous jungle Poppy experience
 - Info.: playful milk-themed education, study and military-service periods, airborne training, and Dplus KIA fandom since December 2022
-- Posts: “미래상” / “A Vision of the Future”, published November 3, 2026, at `#posts/future-outlook`; the two temporary sample articles have been removed
+- Posts: “행운의 여신은 용감한 자를 좋아한다.” / “Fortuna Favors the Bold.” at `#posts/fortuna-favors-the-bold`, and “미래상” / “A Vision of the Future” at `#posts/future-outlook`, both published November 3, 2026; the two temporary sample articles have been removed
 
 To replace the profile photo, replace `assets/profile.jpg` with a new image using the same filename.
 The two temporary sample articles have been removed. The post styling and hash routing are preserved. To add a post, place a `.post-item` in `.post-list` with a `.post-link` to `#posts/your-slug` and a `.post-date` time element. Add a `.post-article` with `data-post-article="your-slug"`, `hidden`, and `aria-labelledby` pointing to its unique heading ID inside `posts-panel`. Its structure is a `.post-back` link to `#posts`, a `.post-header` containing the full `h2` title and a muted `.post-meta` date, then a `.post-body` with paragraphs and optional `h3` subheadings. Add matching Korean and English translation strings; use `data-i18n-title` on the list link so the full title is available when it is truncated. Keep the list in reverse chronological order.
