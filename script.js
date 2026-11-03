@@ -37,29 +37,6 @@ const translations = {
     "posts.title": "Posts",
     "posts.listLabel": "Post list",
     "posts.back": "← All posts",
-    "posts.sample.title":
-      "Notes from a Rainy Afternoon — On Raindrops Gathering on the Window, a Cup of Coffee Left to Go Cold, an Unfinished Book, and the Small but Lasting Thoughts That Appeared During an Aimless Walk Through the Neighborhood",
-    "posts.sample.date": "October 17, 2026",
-    "posts.sample.paragraph1":
-      "As raindrops gathered on the window, I closed the book lying open on my desk. On some days, the view outside stays with me more clearly than the pages I have read.",
-    "posts.sample.paragraph2":
-      "While my coffee cooled, I wrote down three small plans: take a walk, finish a sentence I had been putting off, and leave a little time for doing nothing.",
-    "posts.sample.subtitle": "A slower pace",
-    "posts.sample.paragraph3":
-      "After the rain stopped, I walked around the nearby streets. Nothing remarkable happened, but I liked the smell of wet leaves and the reflections in the puddles beneath the streetlights.",
-    "posts.sample.paragraph4":
-      "The conclusion was simple: not every day needs a grand title. When there is a moment worth remembering, a few lines are enough.",
-    "posts.bookshop.title": "How to Get Lost in a Bookshop",
-    "posts.bookshop.date": "October 24, 2026",
-    "posts.bookshop.paragraph1":
-      "I went into a small bookshop to buy a notebook. Ten minutes later, I had forgotten the notebook and was reading the opening pages of a book I had never heard of.",
-    "posts.bookshop.paragraph2":
-      "The shelves seemed to have their own idea of where I should go. A collection of essays led me to a travel journal, and the journal somehow led me to a book about keeping plants alive.",
-    "posts.bookshop.subtitle": "A book I hadn't planned to buy",
-    "posts.bookshop.paragraph3":
-      "I chose the thinnest book in the pile, partly because it would fit in my coat pocket. On the walk home, I stopped at a quiet cafe and read the first chapter by the window.",
-    "posts.bookshop.paragraph4":
-      "The notebook can wait until tomorrow. For today, taking a small detour was enough.",
     "copy.success": "{email} copied to clipboard.",
     "copy.error":
       "Could not copy automatically. Please select the email address manually.",
@@ -100,29 +77,6 @@ const translations = {
     "posts.title": "포스트",
     "posts.listLabel": "포스트 목록",
     "posts.back": "← 글 목록으로",
-    "posts.sample.title":
-      "비 오는 오후의 작은 기록 — 창문에 맺힌 빗방울을 바라보다가 식어 버린 커피 한 잔과 끝내 읽지 못한 책, 그리고 아무런 계획 없이 걸었던 골목에서 떠올린 사소하지만 오래 남을 생각들에 대하여",
-    "posts.sample.date": "2026년 10월 17일",
-    "posts.sample.paragraph1":
-      "창문에 빗방울이 하나둘 맺히던 오후, 책상 위에 펼쳐 둔 책을 잠시 덮었다. 읽은 페이지보다 오래 바라본 창밖의 풍경이 더 선명하게 남는 날도 있다.",
-    "posts.sample.paragraph2":
-      "커피가 식는 동안 해야 할 일을 세 줄로 적었다. 첫 번째는 산책하기, 두 번째는 미뤄 둔 문장 마무리하기, 마지막은 아무것도 하지 않는 시간을 조금 남겨 두기였다.",
-    "posts.sample.subtitle": "조금 느리게",
-    "posts.sample.paragraph3":
-      "비가 그친 뒤에는 가까운 골목을 한 바퀴 돌았다. 특별한 사건은 없었지만 젖은 나뭇잎 냄새와 가로등 아래 고인 물의 색이 마음에 들었다.",
-    "posts.sample.paragraph4":
-      "오늘의 결론은 간단하다. 모든 하루에 거창한 이름을 붙일 필요는 없다. 다만 잊고 싶지 않은 장면이 있다면, 이렇게 몇 줄 남겨 두는 것으로 충분하다.",
-    "posts.bookshop.title": "서점에서 길을 잃는 방법",
-    "posts.bookshop.date": "2026년 10월 24일",
-    "posts.bookshop.paragraph1":
-      "수첩 한 권을 사려고 작은 서점에 들어갔다. 십 분쯤 지나자 수첩 생각은 사라졌고, 제목도 처음 보는 책의 첫 장을 읽고 있었다.",
-    "posts.bookshop.paragraph2":
-      "서가에는 나름의 길 안내가 있는 모양이었다. 에세이를 집어 들었다가 여행기로 옮겨 갔고, 어느새 화분을 잘 키우는 방법이 적힌 책 앞에 서 있었다.",
-    "posts.bookshop.subtitle": "계획에 없던 한 권",
-    "posts.bookshop.paragraph3":
-      "결국 가장 얇은 책을 골랐다. 외투 주머니에 들어간다는 점이 마음에 들었다. 집으로 돌아오는 길에는 조용한 카페에 들러 창가에서 첫 장을 읽었다.",
-    "posts.bookshop.paragraph4":
-      "수첩은 내일 사도 괜찮다. 오늘은 조금 돌아가는 길을 찾았다는 것만으로 충분했다.",
     "copy.success": "{email} 주소가 복사되었습니다.",
     "copy.error":
       "자동으로 복사하지 못했습니다. 이메일 주소를 직접 선택해 주세요.",
