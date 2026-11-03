@@ -9,7 +9,7 @@ The current classic, minimal presentation is the approved project baseline. [AGE
 - Flat ivory background, dark serif text, thin rules, and a rectangular grayscale portrait.
 - Plain text navigation and language controls with underlined selection; no rounded cards, pill buttons, shadows, or gradients.
 - Lining numerals with proportional spacing so dates and numbers align naturally with the text.
-- Short, natural Korean and English copy that preserves the site's playful personal tone.
+- Short, natural Korean and English copy that preserves the author's personal voice and presents education factually.
 - Full English month names, such as `December 2022`.
 - Dates and periods appear below their main content, in smaller, muted text using `info-note`.
 - No homepage preview images or screenshots unless explicitly requested.
@@ -31,7 +31,7 @@ The current classic, minimal presentation is the approved project baseline. [AGE
 - Left profile column: grayscale photo, `Fortuna favors the bold.`, location, and contact email
 - KOR / ENG language toggle
 - Home: welcome title, linked nickname, Silver III peak rank, Zeri one-trick introduction, and previous jungle Poppy experience
-- Info.: playful milk-themed education, study and military-service periods, airborne training, and Dplus KIA fandom since December 2022
+- Info.: undergraduate studies in Mathematics at Konkuk University, study and military-service periods, airborne training, and Dplus KIA fandom since December 2022
 - Posts: ep. 2 “행운의 여신은 용감한 자를 좋아한다.” / “Fortuna Favors the Bold.” at `#posts/fortuna-favors-the-bold`, and ep. 1 “미래상” / “A Vision of the Future” at `#posts/future-outlook`, both published November 3, 2026; the two temporary sample articles have been removed
 
 To replace the profile photo, replace `assets/profile.jpg` with a new image using the same filename.

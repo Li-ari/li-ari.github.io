@@ -246,22 +246,8 @@ h2 {
   margin: 9px 0 0;
 }
 
-.education-degree-line {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 5px 14px;
-}
-
-.education-degree-line .education-degree {
+.education-block .education-degree {
   margin: 0;
-}
-
-.milk-buy-link {
-  flex: 0 0 auto;
-  color: var(--muted);
-  font-size: 0.82rem;
-  white-space: nowrap;
 }
 
 .education-block .airborne-training {

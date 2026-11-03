@@ -25,8 +25,7 @@ const translations = {
       "I used to main Poppy in the jungle, and I'm very good at her too.",
     "info.title": "Info.",
     "info.education.degree":
-      "B.S. in Dark Chocolate Milk at Konkuk Milk, Seoul, South Korea",
-    "info.education.buyMilk": "Buy milk ↗",
+      "B.S. in Mathematics, Konkuk University (in progress)",
     "info.education.period": "March 2020 – Expected February 2027",
     "info.education.service":
       "(September 2020 - March 2022 : Mandatory military service)",
@@ -95,8 +94,7 @@ const translations = {
     "home.poppy":
       "이전에는 정글 뽀삐를 주로 플레이했고, 뽀삐도 아주 잘합니다.",
     "info.title": "정보",
-    "info.education.degree": "건국우유 다크 초코렛 우유학과 학사과정",
-    "info.education.buyMilk": "구입하기 ↗",
+    "info.education.degree": "건국대 수학과 학사과정",
     "info.education.period": "2020년 3월 – 2027년 2월 졸업 예정",
     "info.education.service": "(2020년 9월 – 2022년 3월: 병역 의무)",
     "info.airborne.title": "공수기본 #845",
