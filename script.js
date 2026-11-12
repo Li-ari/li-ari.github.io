@@ -168,6 +168,9 @@ const copyStatus = document.querySelector("[data-copy-status]");
 const viewButtons = document.querySelectorAll("[data-view-target]");
 const contentPanels = document.querySelectorAll("[data-content-panel]");
 const languageButtons = document.querySelectorAll("[data-language]");
+const availableLanguages = new Set(
+  Array.from(languageButtons, (button) => button.dataset.language),
+);
 const postsPanel = document.getElementById("posts-panel");
 const postListView = document.querySelector("[data-post-list-view]");
 const postArticles = document.querySelectorAll("[data-post-article]");
@@ -265,7 +268,10 @@ function getSavedLanguage() {
 }
 
 function setLanguage(language) {
-  currentLanguage = translations[language] ? language : defaultLanguage;
+  currentLanguage =
+    availableLanguages.has(language) && Object.hasOwn(translations, language)
+      ? language
+      : defaultLanguage;
   updateTranslatedText();
   updateLanguageButtons();
   emailCopyLinks.forEach((emailCopyLink) => {

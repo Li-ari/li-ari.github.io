@@ -26,10 +26,11 @@ The current classic, minimal presentation is the approved project baseline. [AGE
 ## Current Content
 
 - Name: `Oh Yuhwan`
+- Site name in the header: `Liari`
 - Location: `Seongdong-gu, Seoul`
 - Email: `hhaugustin893@gmail.com`
 - Left profile column: grayscale photo, `Fortuna favors the bold.`, location, and contact email
-- KOR / ENG language toggle
+- ENG is the only visible language option; Korean translations remain in the source.
 - Home: welcome title, linked nickname, Silver III peak rank, Zeri one-trick introduction, and previous jungle Poppy experience
 - Info.: undergraduate studies in Mathematics at Konkuk University, study and military-service periods, airborne training, and Dplus KIA fandom since December 2022
 - Posts: ep. 3 “수학을 배우고자 하는 이유” / “Why I Want to Study Mathematics” at `#posts/why-study-mathematics`, ep. 2 “행운의 여신은 용감한 자를 좋아한다.” / “Fortuna Favors the Bold.” at `#posts/fortuna-favors-the-bold`, and ep. 1 “미래상” / “A Vision of the Future” at `#posts/future-outlook`, all published November 3, 2026; the two temporary sample articles have been removed
