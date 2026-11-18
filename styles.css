@@ -60,27 +60,12 @@ a:hover {
   border-bottom: 1px solid var(--text);
 }
 
-.brand-group {
-  display: flex;
-  align-items: baseline;
-  flex-wrap: wrap;
-  gap: 8px 25px;
-  min-width: 0;
-}
-
 .brand {
   font-size: 1.3rem;
   font-weight: 400;
   text-decoration: none;
 }
 
-.language-toggle {
-  display: inline-flex;
-  align-items: baseline;
-  gap: 13px;
-}
-
-.language-button,
 .nav-button {
   appearance: none;
   border: 0;
@@ -90,20 +75,6 @@ a:hover {
   cursor: pointer;
   font: inherit;
   font-weight: 400;
-}
-
-.language-button {
-  min-height: 32px;
-  padding: 6px 0;
-  font-size: 0.72rem;
-  letter-spacing: 0.06em;
-}
-
-.language-button:hover,
-.language-button.is-active {
-  color: var(--text);
-  text-decoration: underline;
-  text-underline-offset: 5px;
 }
 
 .site-nav {
@@ -400,9 +371,8 @@ h2 {
     padding: 18px 0 12px;
   }
 
-  .brand-group {
+  .brand {
     width: 100%;
-    justify-content: space-between;
   }
 
   .site-nav {

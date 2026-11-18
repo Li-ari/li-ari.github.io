@@ -7,7 +7,7 @@ A static personal homepage built with HTML, CSS, and JavaScript, published at [l
 The current classic, minimal presentation is the approved project baseline. [AGENTS.md](AGENTS.md) records the design, bilingual writing conventions, information hierarchy, validation approach, and publishing workflow for future changes.
 
 - Flat ivory background, dark serif text, thin rules, and a rectangular grayscale portrait.
-- Plain text navigation and language controls with underlined selection; no rounded cards, pill buttons, shadows, or gradients.
+- Plain text navigation with underlined selection; no rounded cards, pill buttons, shadows, or gradients.
 - Lining numerals with proportional spacing so dates and numbers align naturally with the text.
 - Short, natural Korean and English copy that preserves the author's personal voice and presents education factually.
 - Full English month names, such as `December 2022`.
@@ -18,7 +18,7 @@ The current classic, minimal presentation is the approved project baseline. [AGE
 
 - `index.html`: page content
 - `styles.css`: layout, styling, and responsive design
-- `script.js`: tab switching, language switching, and email copy behavior
+- `script.js`: tab switching, translations, and email copy behavior
 - `AGENTS.md`: approved project conventions and instructions for future work
 - `assets/profile.jpg`: profile photo
 - `assets/favicon.ico`: browser tab icon
@@ -30,7 +30,7 @@ The current classic, minimal presentation is the approved project baseline. [AGE
 - Location: `Seongdong-gu, Seoul`
 - Email: `hhaugustin893@gmail.com`
 - Left profile column: grayscale photo, `Fortuna favors the bold.`, location, and contact email
-- ENG is the only visible language option; Korean translations remain in the source.
+- The site is displayed in English without language buttons; Korean translations remain in the source.
 - Home: welcome title, linked nickname, Silver III peak rank, Zeri one-trick introduction, and previous jungle Poppy experience
 - Info.: undergraduate studies in Mathematics at Konkuk University, study and military-service periods, airborne training, and Dplus KIA fandom since December 2022
 - Posts: ep. 3 “수학을 배우고자 하는 이유” / “Why I Want to Study Mathematics” at `#posts/why-study-mathematics`, ep. 2 “행운의 여신은 용감한 자를 좋아한다.” / “Fortuna Favors the Bold.” at `#posts/fortuna-favors-the-bold`, and ep. 1 “미래상” / “A Vision of the Future” at `#posts/future-outlook`, all published November 3, 2026; the two temporary sample articles have been removed

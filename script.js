@@ -3,7 +3,6 @@ const translations = {
     "meta.title": "Oh Yuhwan | Personal Blog",
     "meta.description": "Oh Yuhwan's personal blog.",
     "meta.ogDescription": "A minimal personal blog for Oh Yuhwan.",
-    "language.label": "Language",
     "nav.label": "Main navigation",
     "nav.home": "Home",
     "nav.info": "Info.",
@@ -83,7 +82,6 @@ const translations = {
     "meta.title": "오유환 | 개인 블로그",
     "meta.description": "오유환의 개인 블로그입니다.",
     "meta.ogDescription": "오유환의 간단한 개인 블로그입니다.",
-    "language.label": "언어",
     "nav.label": "주요 메뉴",
     "nav.home": "홈",
     "nav.info": "정보",
@@ -159,18 +157,10 @@ const translations = {
   },
 };
 
-const defaultLanguage = "en";
-const languageStorageKey = "personal-homepage-language";
-let currentLanguage = defaultLanguage;
-
 const emailCopyLinks = document.querySelectorAll("[data-copy-email]");
 const copyStatus = document.querySelector("[data-copy-status]");
 const viewButtons = document.querySelectorAll("[data-view-target]");
 const contentPanels = document.querySelectorAll("[data-content-panel]");
-const languageButtons = document.querySelectorAll("[data-language]");
-const availableLanguages = new Set(
-  Array.from(languageButtons, (button) => button.dataset.language),
-);
 const postsPanel = document.getElementById("posts-panel");
 const postListView = document.querySelector("[data-post-list-view]");
 const postArticles = document.querySelectorAll("[data-post-article]");
@@ -183,7 +173,7 @@ const panelHashes = {
 };
 
 function translate(key) {
-  return translations[currentLanguage][key] ?? translations.en[key] ?? "";
+  return translations.en[key] ?? "";
 }
 
 function updatePostEpisodeTitles() {
@@ -230,7 +220,6 @@ function updateTranslatedText() {
 
   updatePostEpisodeTitles();
 
-  document.documentElement.lang = currentLanguage === "ko" ? "ko" : "en";
   document.title = translate("meta.title");
   document
     .querySelector('meta[name="description"]')
@@ -241,50 +230,6 @@ function updateTranslatedText() {
   document
     .querySelector('meta[property="og:description"]')
     ?.setAttribute("content", translate("meta.ogDescription"));
-}
-
-function updateLanguageButtons() {
-  languageButtons.forEach((button) => {
-    const isActive = button.dataset.language === currentLanguage;
-    button.classList.toggle("is-active", isActive);
-    button.setAttribute("aria-pressed", String(isActive));
-  });
-}
-
-function saveLanguage(language) {
-  try {
-    window.localStorage.setItem(languageStorageKey, language);
-  } catch {
-    // Ignore storage failures; the visible language still changes.
-  }
-}
-
-function getSavedLanguage() {
-  try {
-    return window.localStorage.getItem(languageStorageKey);
-  } catch {
-    return null;
-  }
-}
-
-function setLanguage(language) {
-  currentLanguage =
-    availableLanguages.has(language) && Object.hasOwn(translations, language)
-      ? language
-      : defaultLanguage;
-  updateTranslatedText();
-  updateLanguageButtons();
-  emailCopyLinks.forEach((emailCopyLink) => {
-    emailCopyLink.classList.remove("is-copied");
-  });
-
-  if (copyStatus) {
-    window.clearTimeout(copyStatusTimerId);
-    copyStatus.textContent = "";
-    copyStatus.classList.remove("is-visible", "is-error");
-  }
-
-  saveLanguage(currentLanguage);
 }
 
 function showCopyStatus(message, isError = false) {
@@ -421,12 +366,6 @@ function syncPanelWithUrl(event) {
 window.addEventListener("popstate", syncPanelWithUrl);
 window.addEventListener("hashchange", syncPanelWithUrl);
 
-languageButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    setLanguage(button.dataset.language);
-  });
-});
-
 async function copyText(text) {
   if (navigator.clipboard && window.isSecureContext) {
     try {
@@ -486,5 +425,5 @@ emailCopyLinks.forEach((emailCopyLink) => {
   });
 });
 
-setLanguage(getSavedLanguage() ?? defaultLanguage);
+updateTranslatedText();
 syncPanelWithUrl();
